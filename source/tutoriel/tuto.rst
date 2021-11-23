@@ -5,9 +5,9 @@ Tutoriel
 .. toctree::
     :maxdepth: 2    
 
-    ARB <Application_ARB.rst>
-    NetLogo <Application_NetLogo.rst>
-    ParaView <Application_ParaView.rst>
-    Jupyter notebook <Application_Jupyter_notebook.rst>
+   Application ARB <Application_ARB.rst>
+   Application NetLogo <Application_NetLogo.rst>
+   Application ParaView <Application_ParaView.rst>
+   Application Jupyter notebook <Application_Jupyter_notebook.rst>
 
 
