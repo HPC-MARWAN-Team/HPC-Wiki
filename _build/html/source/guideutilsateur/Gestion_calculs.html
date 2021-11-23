@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gestion des calculs &mdash; HPC-MARWAN  documentation</title>
+      <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Gestion des données" href="Gestion_donnees.html" />
+    <link rel="prev" title="Accès à l’HPC via Windows" href="windows.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../../index.html" class="icon icon-home"> HPC-MARWAN
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="indexguide.html">Guide utilisateur</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="Linux.html"> Accès à l’HPC via Linux</a></li>
+<li class="toctree-l2"><a class="reference internal" href="windows.html"> Accès à l’HPC via Windows</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#"> Gestion des calculs</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#commandes-communes-de-slurm">Commandes communes de Slurm :</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#execution-d-un-calcul-batch">Exécution d’un calcul batch :</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#les-directives-dun-script">Les directives d’un script :</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#exemple-de-script-run-sl-pour-les-applications-installer-sur-hpc">Exemple de script run.sl pour les applications installer sur HPC :</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#interactive-jobs">Interactive jobs :</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="Gestion_donnees.html"> Gestion des données</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Gestion_modules_environnement.html"> Gestion des modules d’environnement</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../tutoriel/tuto.html">Tutoriel</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">HPC-MARWAN</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home"></a> &raquo;</li>
+          <li><a href="indexguide.html">Guide Utilisateur</a> &raquo;</li>
+      <li>Gestion des calculs</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../_sources/source/guideutilsateur/Gestion_calculs.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="gestion-des-calculs">
+<h1>Gestion des calculs<a class="headerlink" href="#gestion-des-calculs" title="Permalink to this headline"></a></h1>
+<p>Un système HPC peut avoir des milliers de nœuds et des milliers d’utilisateurs. Comment décider qui obtient quoi et quand ? Comment s’assurer qu’une tâche est exécutée avec les ressources dont elle a besoin ? Cette tâche est traitée par un type de logiciel spécial appelé <code class="docutils literal notranslate"><span class="pre">scheduler</span></code> ,sur un système HPC, l’ordonnanceur gère les tâches qui sont exécutées où et quand.</p>
+<p>Le but premier de l’ordonnanceur de tâches est de réserver des ressources pour les calculs des utilisateurs afin de garantir que les calculs soient exécutés au mieux. Il empêche la surcharge d’un nœud de calcul donné et met les calculs en attente jusqu’à ce que les ressources soient disponibles.</p>
+<p>Le second objectif de l’ordonnanceur est de surveiller l’utilisation pour assurer une distribution équitable des ressources HPC dans le temps. Les politiques de partage équitable empêchent un utilisateur ou un groupe donné de monopoliser l’ensemble du cluster pendant des périodes prolongées si les calculs d’autres utilisateurs sont en attente dans la file d’attente.</p>
+<p>Sur Le cluster HPC-MARWAN, vous contrôlez vos calculs en utilisant un système de planification des tâches appelé Slurm qui gère et vous attribuer les ressources informatiques.</p>
+<p>Soyez un bon utilisateur du cluster. N’exécutez pas les calculs sur des nœuds de connexion (login), car ce-ci peut avoir un impact sur les sessions et la connectivité de tous les autres membres du cluster.</p>
+<p>Afin de faciliter l’utilisation de l’ordonnanceur, un certain nombre d’exemples de scripts relatifs aux applications installées sur HPC-MARWAN ont été créés (voir ici). En outre, des scripts simples ont été créés pour illustrer l’utilisation actuelle du HPC et pour aider à supprimer des calculs HPC.</p>
+<section id="commandes-communes-de-slurm">
+<h2>Commandes communes de Slurm :<a class="headerlink" href="#commandes-communes-de-slurm" title="Permalink to this headline"></a></h2>
+<p>Soumettre un script exécutable au système de mise en file d’attente :</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sbatch script.sl
+</pre></div>
+</div>
+<p>Liste des calculs en attente et en cours.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>squeue -u<span class="nv">$USER</span>
+</pre></div>
+</div>
+<p>Annuler un calcul en attente ou arrêterun calcul en cours.
+.. code-block:: bash</p>
+<blockquote>
+<div><p>scancel &lt;job_id&gt;</p>
+</div></blockquote>
+<p>Vérifier le statut d’un calcul individuel (y compris les calculs échoués ou achevés).</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sacct -j &lt;job_id&gt;
+
+exemple :
+
+sacct -j <span class="m">61458</span> -o start,end
+
+Start End
+
+------------------- -------------------
+
+<span class="m">2020</span>-05-08T23:55:15 <span class="m">2020</span>-05-09T01:55:44
+
+<span class="m">2020</span>-05-08T23:55:15 <span class="m">2020</span>-05-09T01:55:45
+</pre></div>
+</div>
+<p>Afficher les informations sur les nœuds et les partitions de Slurm.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sinfo <span class="o">[</span>OPTIONS...<span class="o">]</span> : pour visualiser les nœuds hors ligne <span class="o">(</span>sinfo –R<span class="o">)</span>.
+</pre></div>
+</div>
+<img alt="figures/img_gestioncalcul/sinfo.png" src="figures/img_gestioncalcul/sinfo.png" />
+</section>
+<section id="execution-d-un-calcul-batch">
+<h2>Exécution d’un calcul batch :<a class="headerlink" href="#execution-d-un-calcul-batch" title="Permalink to this headline"></a></h2>
+<p>Afin de lancer un job sur l’HPC, vous êtes invités à préparer un script slurm <a class="reference external" href="https://slurm.schedmd.com/sbatch.html">https://slurm.schedmd.com/sbatch.html</a> compatible avec l’application que vous souhaitez utiliser. Ce script shell appelé <code class="docutils literal notranslate"><span class="pre">script</span> <span class="pre">de</span> <span class="pre">soumission</span></code> enveloppe votre travail. Un script de soumission se compose de trois parties:</p>
+<ol class="arabic simple">
+<li><p>le programme qui doit exécuter le script. Il s’agit normalement de <code class="docutils literal notranslate"><span class="pre">#!/bin/bash</span></code>.</p></li>
+<li><p>les “directives” qui indiquent à l’ordonnanceur comment configurer les ressources de calcul pour votre job. Ces lignes doivent apparaître avant toute autre commande ou définition, sinon elles seront ignorées.</p></li>
+<li><p>La partie “script” proprement dite, c’est-à-dire les commandes que vous voulez faire exécuter par votre tâche .</p></li>
+</ol>
+<p>Voici un exemple de <code class="docutils literal notranslate"><span class="pre">script.sl</span></code> qui exécute un job sur une unité centrale sur un seul nœud :</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="ch">#!/bin/bash</span>
+
+<span class="c1">#SBATCH --job-name=my_job</span>
+
+<span class="c1">#SBATCH --ntasks=1 --nodes=1</span>
+
+<span class="c1">#SBATCH --mem-per-cpu=5G</span>
+
+<span class="c1">#SBATCH --time=12:00:00</span>
+
+<span class="c1">#SBATCH --mail-type=ALL</span>
+
+<span class="c1">#SBATCH --mail-user=&lt;email&gt;</span>
+
+
+./myprog -p <span class="m">20</span> arg1 arg2 arg3 ...
+</pre></div>
+</div>
+<p>Pour soumettre ce job à l’ordonnanceur, nous utilisons la commande <code class="docutils literal notranslate"><span class="pre">sbatch</span></code>.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ sbatch script.sl
+
+Submitted batch job <span class="m">36855</span>
+</pre></div>
+</div>
+<p>Pour vérifier l’état de notre travail, nous vérifions la file d’attente en utilisant la commande <code class="docutils literal notranslate"><span class="pre">squeue</span> <span class="pre">-u</span> <span class="pre">yourUsername</span></code>.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ squeue -u yourUsernameJOBID USER ACCOUNT NAME ST REASON START_TIME TIME TIME_LEFT NODES
+CPUS36856 yourUsername yourAccount example-job.sh R None <span class="m">2017</span>-07-01T16:47:02 <span class="m">0</span>:11 <span class="m">59</span>:49 <span class="m">1</span> <span class="m">1</span>
+</pre></div>
+</div>
+</section>
+<section id="les-directives-dun-script">
+<h2>Les directives d’un script :<a class="headerlink" href="#les-directives-dun-script" title="Permalink to this headline"></a></h2>
+<p>Comme le montre l’exemple ci-dessus, les “directives” sont composées de <code class="docutils literal notranslate"><span class="pre">#SBATCH</span></code> suivi des options Slurm. Les options les plus couramment utilisées sont les suivantes :</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 18%" />
+<col style="width: 16%" />
+<col style="width: 66%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><strong>Option</strong></p></td>
+<td><p><strong>Abréviation</strong></p></td>
+<td><p><strong>Description</strong></p></td>
+</tr>
+<tr class="row-even"><td><p><strong>–job-name</strong></p></td>
+<td><p>-J</p></td>
+<td><p>Nom personnalisé du job</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>–partition</strong></p></td>
+<td><p>-p</p></td>
+<td><p>Partition sur laquelle le job sera exécuté (defq, shortq, mediumq, longq)</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>–nodes</strong></p></td>
+<td><p>-N</p></td>
+<td><p>Nombre total de nœuds</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>–ntasks</strong></p></td>
+<td><p>-n</p></td>
+<td><p>Nombre de “tâches”. A utiliser pour le calcul parallèle.</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>–cpus-per-task</strong></p></td>
+<td><p>-c</p></td>
+<td><p>Nombre de CPU alloués à chaque tâche</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>–ntasks-per-node</strong></p></td>
+<td></td>
+<td><p>Nombre de “tâches” par nœud. A utiliser pour le calcul parallèle.</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>–time</strong></p></td>
+<td><p>-t</p></td>
+<td><dl class="simple">
+<dt>Durée maximale d’un job au format D-HH:MM:SS (par exemple –time=1- pour un jour ou</dt><dd><p>–time=4:00:00 pour 4 heures)</p>
+</dd>
+</dl>
+</td>
+</tr>
+<tr class="row-odd"><td><p><strong>–constraint</strong></p></td>
+<td><p>-C</p></td>
+<td><p>Architecture spécifique des nœuds</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>–mem-per-cpu</strong></p></td>
+<td></td>
+<td><p>Mémoire demandée par CPU (par exemple 10G pour 10 GB)</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>–mem</strong></p></td>
+<td></td>
+<td><p>Mémoire requise par noeud (par exemple 40G pour 40 GB)</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>–mail-user</strong></p></td>
+<td></td>
+<td><p>Adresse de courrier électronique</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>–mail-type</strong></p></td>
+<td></td>
+<td><p>Contrôlez les courriels envoyés à l’utilisateur lors d’événements professionnels.
+Utilisez TOUS pour recevoir des notifications par e-mail au début et à la fin du job.</p></td>
+</tr>
+</tbody>
+</table>
+<p>Des options supplémentaires sont disponibles dans la documentation officielle de Slurm. Si vous ne spécifiez pas de partition, votre job sera placé dans la partition par défaut du cluster HPC-MARWAN.</p>
+<section id="exemple-de-script-run-sl-pour-les-applications-installer-sur-hpc">
+<h3>Exemple de script run.sl pour les applications installer sur HPC :<a class="headerlink" href="#exemple-de-script-run-sl-pour-les-applications-installer-sur-hpc" title="Permalink to this headline"></a></h3>
+<p>Vous trouvez sur le lien suivant des exemples de script que vous pouvez utiliser ou s’inspirer d’eux pour écrire votre script slurm :<a class="reference external" href="https://github.com/rahimbouchra/hpc_samples">https://github.com/rahimbouchra/hpc_samples</a> .</p>
+<section id="exemple-de-script-java-run-sl">
+<h4>Exemple de script java run.sl :<a class="headerlink" href="#exemple-de-script-java-run-sl" title="Permalink to this headline"></a></h4>
+</section>
+<section id="example-de-script-python-run-sl">
+<h4>Example de Script python run.sl:<a class="headerlink" href="#example-de-script-python-run-sl" title="Permalink to this headline"></a></h4>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="ch">#!/bin/bash</span>
+
+<span class="c1">#SBATCH --job-name=myPythonjob</span>
+
+<span class="c1">#SBATCH --partition=defq #partition de test limitée a 2h, changer à shortq mediumq ou longq selon durée estimée</span>
+
+<span class="c1">#SBATCH -o %x-%j.out #messages de log</span>
+
+<span class="c1">#SBATCH -e %x-%j.err #messages d&#39;erreurs</span>
+
+
+
+<span class="nb">echo</span> <span class="s2">&quot;Running &quot;</span>
+
+python testpython.py
+
+
+
+<span class="nb">echo</span> <span class="s2">&quot;Done&quot;</span>
+</pre></div>
+</div>
+<p>Puis le lancer avec <code class="docutils literal notranslate"><span class="pre">sbatch</span> <span class="pre">run.sl</span></code></p>
+</section>
+</section>
+<section id="interactive-jobs">
+<h3>Interactive jobs :<a class="headerlink" href="#interactive-jobs" title="Permalink to this headline"></a></h3>
+<p>La soumission des jobs à Slurm se fait soit en mode interactif soit en mode batch, Les jobs interactifs permettent à un utilisateur d’interagir avec des applications en temps réel dans l’environnement HPC. Les utilisateurs peuvent exécuter des applications d’interface utilisateur graphique (GUI), exécuter des scripts ou exécuter d’autres commandes directement sur un nœud de calcul.</p>
+<p>Les utilisateurs sont invités à réserver les ressources nécessaires (nœud de calcul, CPU …) pour leur calcul. Ceux-ci peuvent être exécutés de deux manières, via <code class="docutils literal notranslate"><span class="pre">salloc</span></code> et <code class="docutils literal notranslate"><span class="pre">srun</span></code> . Si vous voulez juste une seule session interactive sur un nœud de calcul, alors utiliser srun pour allouer des ressources pour une seule tâche et lancer un script</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ srun -N <span class="m">1</span> -n <span class="m">1</span> --pty bash –i
+
+$ srun --nodes<span class="o">=</span><span class="m">1</span> --ntasks-per-node<span class="o">=</span><span class="m">1</span> --time<span class="o">=</span><span class="m">01</span>:00:00 --pty bash -i
+</pre></div>
+</div>
+<p>Ici, nous demandons un seul cœur sur un nœud interactif pendant une heure avec la quantité de mémoire par défaut.</p>
+<p>Vous pouvez également allouer un seul nœud ou plusieurs noeuds à l’aide de la commande salloc, puis voir les nœuds qui vous ont été alloués à l’aide de la commande squeue, puis srun ou mpirun pour démarrer les tâches. Par exemple, vous connectez au nœud principal via la commande ssh et allouer un nœud dans le cluster comme suit :</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ salloc -N <span class="m">1</span> bash
+
+salloc: Granted job allocation <span class="m">109512</span>
+
+$ squeue
+
+JOBID PARTITION NAME USER ST TIME NODES NODELIST<span class="o">(</span>REASON<span class="o">)</span>
+
+<span class="m">109512</span> batch bash robh R <span class="m">0</span>:12 <span class="m">1</span> odin006
+</pre></div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">salloc</span></code> / <code class="docutils literal notranslate"><span class="pre">srun</span></code> / <code class="docutils literal notranslate"><span class="pre">sbatch</span></code> prend en charge un large éventail d’options qui vous permettent de demander des nœuds, des processeurs, des tâches, des sockets, des threads, de la mémoire, etc. Si vous les combinez, SLURM essaiera de trouver une allocation raisonnable, donc par exemple si vous demandez 13 tâches et 5 nœuds ,SLURM satisfera votre demande . Voici ceux qui sont les plus susceptibles d’être utiles :</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 22%" />
+<col style="width: 78%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><strong>Option</strong></p></td>
+<td><p><strong>Description</strong></p></td>
+</tr>
+<tr class="row-even"><td><p><strong>-n</strong></p></td>
+<td><p>Nombre de tâches</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>-N</strong></p></td>
+<td><p>Nombre de nœuds à affecter. Si vous l’utilisez,vous pourriez
+également être intéressé par –tasks-per-node</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>–tasks-per-node</strong></p></td>
+<td><p>Tâches maximales à affecter par nœud si vous utilisez -N</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>–cpus-per-task</strong></p></td>
+<td><p>Attribuez des tâches contenant plusieurs CPU. Utile pour
+les jobs avec parallélisation de mémoire partagée</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>-p, –partition</strong></p></td>
+<td><p>Demandez une partition spécifique pour l’allocation des ressources.S’il n’est pas spécifié,
+la partitionpar défaut telle que désignée par l’administrateur système sera sélectionnée.</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>-w</strong></p></td>
+<td><p>Noms des nœuds à inclure - pour sélectionner un ou des nœuds particuliers</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>–mem-per-cpu</strong></p></td>
+<td><p>Utilisez ceci pour que SLURM vous attribue plus de mémoire que la quantité par défaut disponible par CPU</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="windows.html" class="btn btn-neutral float-left" title="Accès à l’HPC via Windows" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="Gestion_donnees.html" class="btn btn-neutral float-right" title="Gestion des données" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2021, MARWAN team.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
