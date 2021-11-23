@@ -1,0 +1,35 @@
+Accès à l’HPC 
+=============
+
+Windows
+-------
+
+Installer un client ssh ( Mobaxterm ou Putty ) et un client scp (Winscp, Filezilla, Mobaxterm) pour le transfert des fichiers
+
+#. Paramètres de connexion: 
+
+.. code-block:: bash   
+    Username : username (remplacer <username> par votre login )
+    Remote host: hpc-login.marwan.ma
+    Port : 22
+    
+#. Exemple : Acces ssh avec MobaXterm
+
+.. image:: figures/img_guideutilisateur/uploadfichier.png
+
+
+
+
+ 
+
+ 
+Exemple : Transfert de fichiers (scp) avec Mobaxterm :
+
+Transfert de fichiers/dossiers de la machine de l’utilisateur vers le dossier personnel sur HPC
+
+Transfert de fichiers/dossiers du dossier personnel sur HPC vers la machine de l’utilisateur
+
+Changement de dossier courant (taper /data/<username>pour accéder au dossier de données et effectuer les transferts)
+
+ 
+
