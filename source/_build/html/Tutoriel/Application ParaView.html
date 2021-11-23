@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>L’application ParaView &mdash; HPC-MARWAN  documentation</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../index.html" class="icon icon-home"> HPC-MARWAN
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../guideutilsateur/indexguide.html">Guide utilisateur</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tuto.html">Tutoriel</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">HPC-MARWAN</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+      <li>L’application ParaView</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/tutoriel/Application ParaView.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="l-application-paraview">
+<h1>L’application ParaView<a class="headerlink" href="#l-application-paraview" title="Permalink to this headline"></a></h1>
+<dl>
+<dt>Ce tutoriel vous montre comment exécuter ParaView avec le client fonctionnant sur votre bureau et les tâches pvserver s’exécutant en parallèle sur le cluster HPC-Marwan. Ce tutoriel suppose que vous avez déjà installé une copie de ParaView sur votre pc . Si ce n’est pas le cas, veuillez consulter la page principale de ParaView pour les instructions de <a class="reference external" href="https://www.paraview.org/">téléchargement</a> (le lien de paraview client correspendant à la version installée sur HPC-Marwan est le suivant<span class="classifier"><a class="reference external" href="https://www.paraview.org/paraview-downloads/download.php?submit=Download&amp;version=v5.6&amp;type=binary&amp;os=Windows&amp;downloadFile=ParaView-5.6.2-Windows-msvc2015-64bit.zip">lien</a>). Si vous utilisez Windows, vous devrez installer un logiciel supplémentaire, par exemple  <a class="reference external" href="https://mobaxterm.mobatek.net/">Mobaxterm</a></span></dt><dd><p>, pour configurer les tunnels SSH.</p>
+</dd>
+</dl>
+<section id="etapes-de-configuration-client-serveur">
+<h2>Etapes de configuration client-serveur :<a class="headerlink" href="#etapes-de-configuration-client-serveur" title="Permalink to this headline"></a></h2>
+<section id="allocation-de-ressource">
+<h3>Allocation de ressource :<a class="headerlink" href="#allocation-de-ressource" title="Permalink to this headline"></a></h3>
+<p>Sur la machine de connexion hpc-login.marwan.ma, utilisez la commande appropriée pour allouer un nœud de calcul libre (srun, salloc ). Vous devez utiliser les différents d’option pour spécifier les détails de la commande tels que le nombre de nœuds, les limites de temps, la partition des nœuds à utiliser. Par exemple :</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>   srun -N <span class="m">1</span> -n <span class="m">1</span> -p defq --pty bash –i
+
+L’option <span class="sb">``</span>defq<span class="sb">``</span> vous permet d’utiliser la partition par defaut <span class="o">(</span>2h<span class="o">)</span>
+</pre></div>
+</div>
+</section>
+<section id="demarrer-le-s-serveur-s">
+<h3>Démarrer le(s) serveur(s):<a class="headerlink" href="#demarrer-le-s-serveur-s" title="Permalink to this headline"></a></h3>
+<p>Une fois que les nœuds sont réservés (dans les prise d’écran, le nœud réservé est : node4 ), vous serez connecté à une ligne de commande interactive sur le premier nœud du travail par lots. Charger le module paraview, et lancer le serveur pvserver souhaitées. Par exemple :</p>
+<img alt="../_images/0-runserver.png" src="../_images/0-runserver.png" />
+<p>Par defaut Paraview utilise le port 11111</p>
+</section>
+<section id="creer-un-tunnel-ssh">
+<h3>Créer un tunnel SSH:<a class="headerlink" href="#creer-un-tunnel-ssh" title="Permalink to this headline"></a></h3>
+<p>Afin de créer des tunnels SSH vers ou depuis votre système Windows, vous aurez besoin d’un logiciel supplémentaire. Nous vous recommandons d’utiliser Mobaxterm comme client SSH sur Windows. Les suivantes vous montrent comment vous pouvez créer un tunnel ssh entre votre machine, la machine hpc-login.marwan.ma et le nœud de calcul réservé auparavant (node4)</p>
+<img alt="../_images/new_ssh_tunel.png" src="../_images/new_ssh_tunel.png" />
+<img alt="../_images/3-runTunnel.png" src="../_images/3-runTunnel.png" />
+</section>
+<section id="connecter-le-client-paraview">
+<h3>Connecter le client ParaView :<a class="headerlink" href="#connecter-le-client-paraview" title="Permalink to this headline"></a></h3>
+<p>Une fois que vous avez un pvserver en cours d’exécution sur le cluster, vous pouvez vous connecter à partir de votre client de bureau. Ouvrez ParaView sur votre bureau (si vous ne l’avez pas déjà fait fonctionner). Ensuite, cliquez sur l’icône Connexion, ou sélectionnez Fichier -&gt; Connexion dans les menus.</p>
+<p>Cela ouvrira le dialogue de connexion. La première fois que vous vous connecterez à partir de votre client, vous devrez configurer un nouveau serveur. Vous ne devriez avoir à le faire qu’une seule fois ; la configuration sera enregistrée et ajoutée à la liste.</p>
+<p>Entrez les valeurs comme indiqué ici pour configurer la connexion. Le “Nom” peut être tout ce que vous souhaitez utiliser pour identifier cette configuration à l’avenir.</p>
+<img alt="../_images/1-configparaviewclient.png" src="../_images/1-configparaviewclient.png" />
+<p>Vous choisissez le dossier de travail( par défaut , il va pointer sur le dossier /home/login, il faut monter à / puis choisir /data/login)</p>
+<img alt="../_images/dossier_de_travail.png" src="../_images/dossier_de_travail.png" />
+<p>Vous pouvez choisir un lecteur (OpenFoam) pour simuler vos données, voir la figure suivante :</p>
+<img alt="../_images/3-paraview_choosereader.png" src="../_images/3-paraview_choosereader.png" />
+<p>A la fin de vos simulation, vouliez arrêter le tunnel ssh et fermer la session ssh vers le nœud de calcul réservé (exit)</p>
+<img alt="../_images/4-paraviewrunsimulation.png" src="../_images/4-paraviewrunsimulation.png" />
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2021, MARWAN team.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gestion des données &mdash; HPC-MARWAN  documentation</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="5. Gestion des modules d’environnement" href="Gestion_modules_environnement.html" />
+    <link rel="prev" title="3. Gestion des calculs" href="Gestion_calculs.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../index.html" class="icon icon-home"> HPC-MARWAN
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="indexguide.html">Guide utilisateur</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="Linux.html">1.  Accès à l’HPC via Linux</a></li>
+<li class="toctree-l2"><a class="reference internal" href="windows.html">2.  Accès à l’HPC via Windows</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Gestion_calculs.html">3.  Gestion des calculs</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#"> Gestion des données</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#gestion-du-quota-disque-sur-home">Gestion du quota disque sur /home</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#commandes-utiles">Commandes Utiles :</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="Gestion_modules_environnement.html">5.  Gestion des modules d’environnement</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../tutoriel/tuto.html">Tutoriel</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">HPC-MARWAN</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+          <li><a href="indexguide.html">Guide Utilisateur</a> &raquo;</li>
+      <li>Gestion des données</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/guideutilsateur/Gestion_donnees.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="gestion-des-donnees">
+<h1>Gestion des données<a class="headerlink" href="#gestion-des-donnees" title="Permalink to this headline"></a></h1>
+<p>Le cluster HPC-MARWAN contient deux espaces disques /home et /data pour la gestion des fichiers. Un dossier personnel est mis à la disposition de l’utilisateur sur chacun des deux espaces :</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Le dossier personnel sur l’espace /home (/home/$USER) , limité à <code class="docutils literal notranslate"><span class="pre">2G</span></code> par utilisateur.</p></li>
+<li><p>Le dossier personnel sur l’espace /data (/data/$USER) , limité à <code class="docutils literal notranslate"><span class="pre">2T</span></code> par utilisateur.</p></li>
+</ul>
+</div></blockquote>
+<p>Il est recommandé d’utiliser l’espace /home pour les fichiers scripts de slurm , bash scripts et codes sources. les fichiers de grandes tailles ( input ou output ) doivent être placé dans le dossier personnel sur l’espace /data .
+<strong>Essayer de nettoyer régulièrement</strong> les dossiers /data/$USER et /home/$USER en supprimant les fichiers et dossiers non utiles et en déplaçant les données pertinentes vers un stockage personnel.</p>
+<section id="gestion-du-quota-disque-sur-home">
+<h2>Gestion du quota disque sur /home<a class="headerlink" href="#gestion-du-quota-disque-sur-home" title="Permalink to this headline"></a></h2>
+<p>Pour avoir plus d’information sur le quota, exécuter la commande :</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nv">$quota</span>
+
+Disk quotas <span class="k">for</span> user:
+ +--------------+---------+---------+----------+-------+-------+-------+-------+-------+
+ <span class="p">|</span> Filesystem   <span class="p">|</span> blocks  <span class="p">|</span> quota   <span class="p">|</span> limit    <span class="p">|</span> grace <span class="p">|</span> files <span class="p">|</span> quota <span class="p">|</span> limit <span class="p">|</span> grace <span class="p">|</span>
+ +--------------+---------+---------+----------+-------+-------+-------+-------+-------+
+ <span class="p">|</span> master:/home <span class="p">|</span> <span class="m">1602908</span> <span class="p">|</span> <span class="m">2097152</span> <span class="p">|</span> R3145728 <span class="p">|</span> <span class="m">0</span>     <span class="p">|</span> <span class="m">15712</span> <span class="p">|</span> <span class="m">0</span>     <span class="p">|</span> <span class="m">0</span>     <span class="p">|</span> <span class="m">0</span>     <span class="p">|</span>
+ +--------------+---------+---------+----------+-------+-------+-------+-------+-------+
+</pre></div>
+</div>
+<dl class="simple">
+<dt>Ou <code class="docutils literal notranslate"><span class="pre">blocks</span></code> est la taille de votre espace /home/$USER en kilobyte, quota est le <code class="docutils literal notranslate"><span class="pre">quota</span></code> de l’espace /home/$USER définit par le système, <code class="docutils literal notranslate"><span class="pre">limit</span></code> est la taille maximum de /home/$USER qu’il ne peut</dt><dd><p>jamais dépasser, <code class="docutils literal notranslate"><span class="pre">grace</span></code> est le compteur déclenché si <code class="docutils literal notranslate"><span class="pre">blocks</span></code> est égale ou supérieur à 2G</p>
+</dd>
+</dl>
+<p>L’utilisateur ne peut pas dépasser la limite de 3G et aura immédiatement une erreur <code class="docutils literal notranslate"><span class="pre">Disk</span> <span class="pre">quota</span> <span class="pre">exceeded</span></code></p>
+<p>Au moment où l’utilisateur dépasse 2G sur son espace /home/$USER 2G, un compteur de <code class="docutils literal notranslate"><span class="pre">14</span> <span class="pre">jours</span></code> se déclenche et décrémente chaque jour. Il s’agit d’un délai donné à l’utilisateur afin de lui permettre de nettoyer son espace /home. A la fin de cette période, si la taille de /home/$USER est toujours supérieure à 2G, le système déclenchera une erreur de dépassement de quota disque <code class="docutils literal notranslate"><span class="pre">Disk</span> <span class="pre">quota</span> <span class="pre">exceeded</span></code></p>
+</section>
+<section id="commandes-utiles">
+<h2>Commandes Utiles :<a class="headerlink" href="#commandes-utiles" title="Permalink to this headline"></a></h2>
+<p>Pour vérifier le contenu des dossiers :</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nv">$ls</span> -al /data/<span class="nv">$USER</span>
+<span class="nv">$ls</span> -al /home/<span class="nv">$USER</span>
+</pre></div>
+</div>
+<p>Pour vérifier la taille des dossiers, utiliser la commande :</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nv">$du</span> -sh /data/<span class="nv">$USER</span>
+<span class="nv">$du</span> -sh /home/<span class="nv">$USER</span>
+</pre></div>
+</div>
+<p>Pour vérifier la taille des sous dossiers :</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nv">$du</span> -h /data/<span class="nv">$USER</span> --max-depth <span class="m">1</span>
+<span class="nv">$du</span> -h /home/<span class="nv">$USER</span> --max-depth <span class="m">1</span>
+</pre></div>
+</div>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="Gestion_calculs.html" class="btn btn-neutral float-left" title="3. Gestion des calculs" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="Gestion_modules_environnement.html" class="btn btn-neutral float-right" title="5. Gestion des modules d’environnement" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2021, MARWAN team.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

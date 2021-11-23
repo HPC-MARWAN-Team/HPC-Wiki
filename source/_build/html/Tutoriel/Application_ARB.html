@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>L’application ARB &mdash; HPC-MARWAN  documentation</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../index.html" class="icon icon-home"> HPC-MARWAN
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../guideutilsateur/indexguide.html">Guide utilisateur</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tuto.html">Tutoriel</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">HPC-MARWAN</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+      <li>L’application ARB</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/tutoriel/Application_ARB.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="l-application-arb">
+<h1>L’application ARB<a class="headerlink" href="#l-application-arb" title="Permalink to this headline"></a></h1>
+<p>Vu le fait que l’application ARB fonctionne en mode graphique, on vous demande de lancer l’application dans un nœud de calcul libre, et non pas au niveau de la machine login login-hpc.marwan.ma, en exécutant les étapes suivantes :</p>
+<blockquote>
+<div><img alt="../_images/etape_de_lancement_de_arb.png" src="../_images/etape_de_lancement_de_arb.png" />
+</div></blockquote>
+<p>Allocation de ressource:  allocation de nœud de calcul libre pour une durée de 2 heure par défaut, vous pouvez la changer en spécifiant la partition avec l’option « -p »  (pour plus de détails sur les partitions voir le lien <a class="reference external" href="https://slurm.schedmd.com/salloc.htmlL">https://slurm.schedmd.com/salloc.html</a>) :</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>   <span class="nv">$salloc</span> -n1
+
+   <span class="nv">$squeue</span> --job <span class="m">65467</span> :JOBID donnée par la commande précédente.
+
+se connecter en mode ssh au noeud réservé au job donnée par la commande précédente.
+</pre></div>
+</div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nv">$ssh</span> -X node07
+</pre></div>
+</div>
+<p>une fois connecté au nœud , charger les modules nécessaires pour le lancement de l’application ARB :</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nv">$module</span> load xerces-c/gcc/64/3.2.2
+
+<span class="nv">$module</span> load ARB/gcc/18314
+</pre></div>
+</div>
+<p>Puis lancer l’application:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nv">$arb</span>
+</pre></div>
+</div>
+<img alt="../_images/ARB_interface.png" src="../_images/ARB_interface.png" />
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>N’oubliez pas de libérer les ressources réservés (nœud de calcul) à la fin du calcul :</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nv">$cancel</span> <span class="m">65467</span>
+</pre></div>
+</div>
+</div>
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2021, MARWAN team.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

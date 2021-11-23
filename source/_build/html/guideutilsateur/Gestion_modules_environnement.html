@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gestion des modules d’environnement &mdash; HPC-MARWAN  documentation</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Tutoriel" href="../tutoriel/tuto.html" />
+    <link rel="prev" title="Gestion des données" href="Gestion_donnees.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../index.html" class="icon icon-home"> HPC-MARWAN
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="indexguide.html">Guide utilisateur</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="Linux.html">1.  Accès à l’HPC via Linux</a></li>
+<li class="toctree-l2"><a class="reference internal" href="windows.html">2.  Accès à l’HPC via Windows</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Gestion_calculs.html">3.  Gestion des calculs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Gestion_donnees.html"> Gestion des données</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#"> Gestion des modules d’environnement</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#liste-de-tous-les-modules-charges">Liste de tous les modules chargés :</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#trouver-les-modules-disponibles">Trouver les modules disponibles :</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#charger-et-decharger-les-modules">Charger et décharger les modules :</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#collections-des-modules">Collections des modules :</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../tutoriel/tuto.html">Tutoriel</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">HPC-MARWAN</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+          <li><a href="indexguide.html">Guide Utilisateur</a> &raquo;</li>
+      <li>Gestion des modules d’environnement</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/guideutilsateur/Gestion_modules_environnement.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="gestion-des-modules-denvironnement">
+<h1>Gestion des modules d’environnement<a class="headerlink" href="#gestion-des-modules-denvironnement" title="Permalink to this headline"></a></h1>
+<p>Afin de répondre au mieux aux divers besoins de tous nos chercheurs, Les logiciels sur HPC-MARWAN sont principalement gérés par un système de modules <code class="docutils literal notranslate"><span class="pre">lmod</span></code>. En chargeant et en commutant les modules, vous contrôlez les compilateurs, les bibliothèques et les logiciels disponibles.</p>
+<p>Lorsque vous compilez ou exécutez des programmes sur HPC-MARWAN, vous devez configurer les modules appropriés, pour charger votre compilateur et toutes les bibliothèques requises (par exemple, les bibliothèques numériques, les bibliothèques de format
+d’entrée/sortie).</p>
+<p>Afin de gérer ces logiciels, le cluster HPC-MARWAN utilise des <code class="docutils literal notranslate"><span class="pre">fichiers</span> <span class="pre">de</span> <span class="pre">module</span></code>.
+Ces fichiers de module vous permettent de spécifier facilement quelles versions de quels paquets vous souhaitez utiliser.</p>
+<p>Pour plus d’informations, consultez la documentation en ligne sur le système de module d’environnement : <a class="reference external" href="https://lmod.readthedocs.io/en/latest/010_user.html">https://lmod.readthedocs.io/en/latest/010_user.html</a></p>
+<section id="liste-de-tous-les-modules-charges">
+<h2>Liste de tous les modules chargés :<a class="headerlink" href="#liste-de-tous-les-modules-charges" title="Permalink to this headline"></a></h2>
+<p>La commande <code class="docutils literal notranslate"><span class="pre">module</span> <span class="pre">list</span></code> affiche tous les noms des modules et de leurs versions qui sont actuellement chargés dans votre environnement :</p>
+<img alt="../_images/lmod1.png" src="../_images/lmod1.png" />
+</section>
+<section id="trouver-les-modules-disponibles">
+<h2>Trouver les modules disponibles :<a class="headerlink" href="#trouver-les-modules-disponibles" title="Permalink to this headline"></a></h2>
+<p>Pour lister les modules disponibles sur le système, on utilise la commande <code class="docutils literal notranslate"><span class="pre">module</span> <span class="pre">avail</span></code> :</p>
+<img alt="../_images/modules_disponibles.png" src="../_images/modules_disponibles.png" />
+<p>Vous pouvez également lister tous les modules dont le nom contient une chaîne de caractères spécifique. Par exemple, pour trouver tous les fichiers de module Python, utilisez <code class="docutils literal notranslate"><span class="pre">module</span> <span class="pre">avail</span> <span class="pre">python</span></code> :</p>
+<img alt="../_images/modules_disponibles2.png" src="../_images/modules_disponibles2.png" />
+<p>Si un logiciel n’est pas disponible dans la liste des modules, n’hésitez pas à nous envoyer une demande d’installation du logiciel à  <a class="reference external" href="mailto:hpc&#37;&#52;&#48;marwan&#46;ma">hpc<span>&#64;</span>marwan<span>&#46;</span>ma</a> .</p>
+</section>
+<section id="charger-et-decharger-les-modules">
+<h2>Charger et décharger les modules :<a class="headerlink" href="#charger-et-decharger-les-modules" title="Permalink to this headline"></a></h2>
+<p>Pour charger un module, on utiliser la commande <code class="docutils literal notranslate"><span class="pre">module</span> <span class="pre">add</span></code> ou <code class="docutils literal notranslate"><span class="pre">module</span> <span class="pre">load</span></code> . Par exemple, si vous avez trouvé et souhaitez charger la version 3.7.4 de Python, exécutez la commande :</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>module load python/3.7.4
+module add python/3.7.4
+</pre></div>
+</div>
+<p>Vous pouvez charger la version par défaut d’un module. Par exemple, pour charger la version par défaut du compilateur <code class="docutils literal notranslate"><span class="pre">gcc</span></code> :</p>
+<img alt="../_images/Charger_moduledefaut.png" src="../_images/Charger_moduledefaut.png" />
+<p>Vous pouvez également décharger / supprimer un module que vous avez déjà chargé, on utilisant les commande <code class="docutils literal notranslate"><span class="pre">module</span> <span class="pre">unload</span></code>, ou <code class="docutils literal notranslate"><span class="pre">module</span> <span class="pre">rm</span></code> :</p>
+<img alt="../_images/decharger_modules.png" src="../_images/decharger_modules.png" />
+</section>
+<section id="collections-des-modules">
+<h2>Collections des modules :<a class="headerlink" href="#collections-des-modules" title="Permalink to this headline"></a></h2>
+<p>Les utilisateurs peuvent créer des collections des modules, qui contiennent la liste des modules à charger chaque fois que vous vous connectez au cluster.</p>
+<p>Cette méthode est particulièrement utile si vous avez deux ou plusieurs ensembles de modules qui peuvent entrer en conflit les uns avec les autres.</p>
+<p>Pour créer une collection sauvegardée, il suffit de charger tous les modules souhaités, puis de taper <code class="docutils literal notranslate"><span class="pre">module</span> <span class="pre">save</span></code> afin d’enregistrer cet ensemble des modules comme votre ensemble par défaut.</p>
+<p>Si vous souhaitez avoir plusieurs collections des modules, il suffit d’attribuer un nom à la collection en tapant <code class="docutils literal notranslate"><span class="pre">module</span> <span class="pre">save</span> <span class="pre">environnement_name</span></code> .</p>
+<img alt="../_images/Collections_modules.png" src="../_images/Collections_modules.png" />
+<p>Pour charger la collection par défaut ou spécifiée, tapez respectivement <code class="docutils literal notranslate"><span class="pre">module</span> <span class="pre">restore</span></code> , <code class="docutils literal notranslate"><span class="pre">module</span> <span class="pre">restore</span> <span class="pre">environnement_name</span></code> .</p>
+<img alt="../_images/charger_collectiondefaut.png" src="../_images/charger_collectiondefaut.png" />
+<p>Pour modifier une collection, restaurer la collection, effectuer les changements souhaités en chargeant et/ou en déchargeant des modules et à sauvegarder sous le même nom.</p>
+<p>Un utilisateur peut lister les collections dont il dispose en tapant <code class="docutils literal notranslate"><span class="pre">module</span> <span class="pre">savelist</span></code> :</p>
+<img alt="../_images/modifier_collection.png" src="../_images/modifier_collection.png" />
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="Gestion_donnees.html" class="btn btn-neutral float-left" title="Gestion des données" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../tutoriel/tuto.html" class="btn btn-neutral float-right" title="Tutoriel" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2021, MARWAN team.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
