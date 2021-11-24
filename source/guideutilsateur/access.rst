@@ -4,4 +4,4 @@
 
      via Windows <Windows.rst>
      via Linux <Linux.rst>
-     via Mac <Linux.rst>
+     via Mac <Mac.rst>
