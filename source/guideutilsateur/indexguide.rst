@@ -6,8 +6,7 @@ Guide Utilisateur
     :maxdepth: 2    
 
 
-     Accès à l’HPC via Windows  <Windows.rst>
-     Accès à l’HPC via Linux  <Windows.rst>
+     Système d'Exploitation <os.rst>
      Gestion des calculs <Gestion_calculs.rst>
      Gestion des données <Gestion_donnees.rst>
      Gestion des modules d’environnement <Gestion_modules_environnement.rst>
