@@ -38,7 +38,7 @@ Ou utiliser un client SCP graphique( exemple Filezilla )Commande d’installatio
   :width: 600
  
  Windows
-===========================================
+=============================
 
 Installer un client ssh ( Mobaxterm ou Putty ) et un client scp (Winscp, Filezilla, Mobaxterm) pour le transfert des fichiers
 
