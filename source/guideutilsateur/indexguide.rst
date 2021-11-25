@@ -6,7 +6,7 @@ Guide Utilisateur
     :maxdepth: 2    
 
 
-         Système d'exploitation <access.rst>
+         Accès à l’HPC <access.rst>
          Gestion des calculs <Gestion_calculs.rst>
          Gestion des données <Gestion_donnees.rst>
          Gestion des modules d’environnement <Gestion_modules_environnement.rst>
