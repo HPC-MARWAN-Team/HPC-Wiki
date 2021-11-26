@@ -18,8 +18,8 @@ sys.path.insert(0, os.path.abspath('.'))
 # -- Project information -----------------------------------------------------
 
 project = 'HPC-MARWAN'
-copyright = '2021, MARWAN team'
-author = 'MARWAN team'
+copyright = '2021, HPC-MARWAN TEAM'
+author = 'HPC-MARWAN TEAM'
 
 
 # -- General configuration ---------------------------------------------------
