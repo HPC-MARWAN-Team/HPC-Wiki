@@ -1,6 +1,9 @@
 ===================
 Gestion des données
 ===================
+Systèmes de fichiers 
+***********************************
+
 Le cluster HPC-MARWAN contient deux espaces disques /home et /data pour la gestion des fichiers. Un dossier personnel est mis à la disposition de l’utilisateur sur chacun des deux espaces :
 
   * Le dossier personnel sur l’espace /home (/home/$USER) , limité à ``2G`` par utilisateur.
