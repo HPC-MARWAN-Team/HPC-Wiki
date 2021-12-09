@@ -64,6 +64,24 @@ Afficher les informations sur les nœuds et les partitions de Slurm.
       :width: 800
 
 
+.. code-block:: bash
+sinfo -o "%40N  %10c  %10m  %25f "
+
+.. image:: /source/figures/img_gestioncalcul/sinfo feature.png
+
+Pour plus d’information sur les option de sinfo, taper la commande sinfo --help. Les options ci-dessus sont des abréviations de :
+
+#. N = nom du noeud
+
+#. c = nombre de cœurs
+
+#. m = mémoire
+
+#. f = caractéristiques, souvent ce sera l'architecture ou le type de gpu associé
+
+Le %40 signifie 40 caractères pour ce champ.
+
+
 Exécution d'un calcul batch 
 *********************************
 
