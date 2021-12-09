@@ -65,7 +65,8 @@ Afficher les informations sur les nœuds et les partitions de Slurm.
 
 
 .. code-block:: bash
-sinfo -o "%40N  %10c  %10m  %25f "
+
+    sinfo -o "%40N  %10c  %10m  %25f"
 
 .. image:: /source/figures/img_gestioncalcul/sinfo feature.png
 
