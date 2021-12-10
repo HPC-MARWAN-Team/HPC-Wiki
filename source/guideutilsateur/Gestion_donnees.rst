@@ -23,19 +23,37 @@ Pour avoir plus d’information sur le quota, exécuter la commande :
 
     $quota -s -f /home
 
-    Disk quotas for user:
-     +--------------+---------+---------+----------+-------+-------+-------+-------+-------+
-     | Filesystem   | blocks  | quota   | limit    | grace | files | quota | limit | grace |
-     +--------------+---------+---------+----------+-------+-------+-------+-------+-------+
-     | master:/home | 1602908 | 2097152 | R3145728 | 0     | 15712 | 0     | 0     | 0     |
-     +--------------+---------+---------+----------+-------+-------+-------+-------+-------+
+.. image:: /source/figures/image_data/quotahome.png
 
+Ou ``blocks`` est la taille de votre espace /home/$USER en kilobyte, quota est le ``quota`` de l’espace /home/$USER définit par le système, ``limit`` est la taille maximum de /home/$USER qu’il ne peut  jamais dépasser, ``grace`` est le compteur déclenché si ``blocks`` est égale ou supérieur à 100G
 
-Ou ``blocks`` est la taille de votre espace /home/$USER en kilobyte, quota est le ``quota`` de l’espace /home/$USER définit par le système, ``limit`` est la taille maximum de /home/$USER qu’il ne peut  jamais dépasser, ``grace`` est le compteur déclenché si ``blocks`` est égale ou supérieur à 2G
+L’utilisateur ne peut pas dépasser la limite de 150G et aura immédiatement une erreur ``Disk quota exceeded``
 
-L’utilisateur ne peut pas dépasser la limite de 3G et aura immédiatement une erreur ``Disk quota exceeded``
+Au moment où l’utilisateur dépasse 100G sur son espace /home/$USER 2G, un compteur de ``14 jours`` se déclenche et décrémente chaque jour. Il s’agit d’un délai donné à l’utilisateur afin de lui permettre de nettoyer son espace /home. A la fin de cette période, si la taille de /home/$USER est toujours supérieure à 100G, le système déclenchera une erreur de dépassement de quota disque ``Disk quota exceeded``
 
-Au moment où l’utilisateur dépasse 2G sur son espace /home/$USER 2G, un compteur de ``14 jours`` se déclenche et décrémente chaque jour. Il s’agit d’un délai donné à l’utilisateur afin de lui permettre de nettoyer son espace /home. A la fin de cette période, si la taille de /home/$USER est toujours supérieure à 2G, le système déclenchera une erreur de dépassement de quota disque ``Disk quota exceeded``
+le process qui precede s'applique aussi sur l'epace /data et /scratch
+
+.. code-block:: bash
+$quota -s -f /data
+
+.. image:: /source/figures/image_data/quotadata.png
+
+Afin d'utiliser l'espace de stockage beegfs, vous êtes invité à se connecte au reseau infiniband (--constraint=ib).
+
+.. code-block:: bash
+$salloc -N 1 -n 1  --constraint=ib -p defq bash
+
+.. code-block:: bash
+$ssh nodeallowed
+
+.. image:: /source/figures/image_data/quotabeegfs.png
+
+Pour plus d'informations sur votre espace de stockage beefgfs, tapez la commande suivante:
+
+.. code-block:: bash
+$beegfs-ctl --getquota --uid $UID
+
+.. image:: /source/figures/image_data/quotabeegfs2.png
 
 Commandes Utiles 
 ******************
