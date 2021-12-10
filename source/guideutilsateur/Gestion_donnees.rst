@@ -12,7 +12,7 @@ Le cluster HPC-MARWAN contient deux espaces disques /home et /data pour la gesti
 
 
 Il est recommandé d’utiliser l’espace /home pour les fichiers scripts de slurm , bash scripts et codes sources. les fichiers de grandes tailles ( input ou output ) doivent être placé dans le dossier personnel sur l’espace /data .
-**Essayer de nettoyer régulièrement** les dossiers /data/$USER et /home/$USER en supprimant les fichiers et dossiers non utiles et en déplaçant les données pertinentes vers un stockage personnel.
+**Essayer de nettoyer régulièrement** les dossiers /data/$USER , /home/$USER et /scratch/$USER en supprimant les fichiers et dossiers non utiles et en déplaçant les données pertinentes vers un stockage personnel.
 
 Gestion du quota disque sur /home
 ***********************************
@@ -25,7 +25,7 @@ Pour avoir plus d’information sur le quota, exécuter la commande :
 
 .. image:: /source/figures/image_data/quotahome.png
 
-Ou ``blocks`` est la taille de votre espace /home/$USER en kilobyte, quota est le ``quota`` de l’espace /home/$USER définit par le système, ``limit`` est la taille maximum de /home/$USER qu’il ne peut  jamais dépasser, ``grace`` est le compteur déclenché si ``blocks`` est égale ou supérieur à 100G
+Ou ``blocks`` est la taille de votre espace /home/$USER en Megabyte, quota est le ``quota`` de l’espace /home/$USER définit par le système, ``limit`` est la taille maximum de /home/$USER qu’il ne peut  jamais dépasser, ``grace`` est le compteur déclenché si ``blocks`` est égale ou supérieur à 100G
 
 L’utilisateur ne peut pas dépasser la limite de 150G et aura immédiatement une erreur ``Disk quota exceeded``
 
