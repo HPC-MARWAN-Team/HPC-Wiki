@@ -6,8 +6,10 @@ Systèmes de fichiers
 
 Le cluster HPC-MARWAN contient deux espaces disques /home et /data pour la gestion des fichiers. Un dossier personnel est mis à la disposition de l’utilisateur sur chacun des deux espaces :
 
-  * Le dossier personnel sur l’espace /home (/home/$USER) , limité à ``2G`` par utilisateur.
-  * Le dossier personnel sur l’espace /data (/data/$USER) , limité à ``2T`` par utilisateur.
+  * Le dossier personnel sur l’espace /home (/home/$USER) , limité à ``100G`` par utilisateur.
+  * Le dossier personnel sur l’espace /data (/data/$USER) , limité à ``500G`` par utilisateur.
+  * Le dossier personnel sur l’espace /scratch (/scratch/$USER) , limité à ``500G`` par utilisateur.
+
 
 Il est recommandé d’utiliser l’espace /home pour les fichiers scripts de slurm , bash scripts et codes sources. les fichiers de grandes tailles ( input ou output ) doivent être placé dans le dossier personnel sur l’espace /data .
 **Essayer de nettoyer régulièrement** les dossiers /data/$USER et /home/$USER en supprimant les fichiers et dossiers non utiles et en déplaçant les données pertinentes vers un stockage personnel.
@@ -19,7 +21,7 @@ Pour avoir plus d’information sur le quota, exécuter la commande :
 
 .. code-block:: bash
 
-    $quota
+    $quota -s -f /home
 
     Disk quotas for user:
      +--------------+---------+---------+----------+-------+-------+-------+-------+-------+
