@@ -34,24 +34,25 @@ Au moment où l’utilisateur dépasse 100G sur son espace /home/$USER 2G, un co
 le process qui precede s'applique aussi sur l'epace /data et /scratch
 
 .. code-block:: bash
-$quota -s -f /data
+
+   $quota -s -f /data
 
 .. image:: /source/figures/image_data/quotadata.png
 
 Afin d'utiliser l'espace de stockage beegfs, vous êtes invité à se connecte au reseau infiniband (--constraint=ib).
 
 .. code-block:: bash
-$salloc -N 1 -n 1  --constraint=ib -p defq bash
+   
+   $salloc -N 1 -n 1  --constraint=ib -p defq bash
+   $ssh nodeallowed
 
-.. code-block:: bash
-$ssh nodeallowed
-
-.. image:: /source/figures/image_data/quotabeegfs.png
+.. image:: /source/figures/image_data/qhotabeegfs.png
 
 Pour plus d'informations sur votre espace de stockage beefgfs, tapez la commande suivante:
 
 .. code-block:: bash
-$beegfs-ctl --getquota --uid $UID
+  
+    $beegfs-ctl --getquota --uid $UID
 
 .. image:: /source/figures/image_data/quotabeegfs2.png
 
