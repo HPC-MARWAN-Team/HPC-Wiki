@@ -43,7 +43,7 @@ Afin d'utiliser l'espace de stockage beegfs, vous êtes invité à se connecte a
 
 .. code-block:: bash
    
-   $salloc -N 1 -n 1  --constraint=ib -p defq bash
+   $salloc -N 1 -n 1  --constraint=beegfs -p defq  bash
    $ssh nodeallowed
 
 .. image:: /source/figures/image_data/qhotabeegfs.png
