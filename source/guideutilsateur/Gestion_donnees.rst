@@ -48,13 +48,13 @@ Afin d'utiliser l'espace de stockage beegfs, vous êtes invité à se connecte a
 
 .. image:: /source/figures/image_data/qhotabeegfs.png
 
-Pour plus d'informations sur votre espace de stockage beefgfs, tapez la commande suivante:
+Pour plus d'informations sur votre espace de stockage beegfs, tapez la commande suivante:
 
 .. code-block:: bash
   
-    $beegfs-ctl --getquota --uid $UID
+    $srun -p defq -C beegfs beegfs-ctl --getquota --uid $UID
 
-.. image:: /source/figures/image_data/quotabeegfs2.png
+.. image:: /source/figures/image_data/quotadatainteractif.png
 
 Commandes Utiles 
 ******************
