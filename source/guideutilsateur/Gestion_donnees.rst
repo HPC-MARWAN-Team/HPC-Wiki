@@ -39,16 +39,8 @@ le process qui precede s'applique aussi sur l'epace /data et /scratch
 
 .. image:: /source/figures/image_data/quotadata.png
 
-Afin d'utiliser l'espace de stockage beegfs, vous êtes invité à se connecte au reseau infiniband (--constraint=ib).
 
-.. code-block:: bash
-   
-   $salloc -N 1 -n 1  --constraint=beegfs -p defq  bash
-   $ssh nodeallowed
-
-.. image:: /source/figures/image_data/qhotabeegfs.png
-
-Pour plus d'informations sur votre espace de stockage beegfs, tapez la commande suivante:
+Pour plus d'informations sur votre espace de stockage beegfs (/scratch), tapez la commande suivante:
 
 .. code-block:: bash
   
