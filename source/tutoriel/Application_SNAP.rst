@@ -13,7 +13,7 @@ Vu le fait que l’application SNAP fonctionne en mode graphique, on vous demand
    :width: 800
  
 
-Allocation de ressource:  allocation de nœud de calcul libre pour une durée de 2 heure par défaut, vous pouvez la changer en spécifiant la partition avec l’option « -p » . vus que l'application SNAP est configuré pour utilisé jusqu'à 16 threads et 10G de memoire, vous pouvez spacifier le nombre de cpu, et la tail de memoire a alloué , en changant l'option «-n et ajoutant l'option «--mem» , (pour plus de détails sur les options de la commande salloc voir le lien `https://slurm.schedmd.com/salloc.html <https://slurm.schedmd.com/salloc.htmlL>`_) :
+Allocation de ressource:  allocation de nœud de calcul libre pour une durée de 2 heure par défaut, vous pouvez la changer en spécifiant la partition avec l’option « -p » . vus que l'application SNAP est configuré pour utilisé jusqu'à 16 threads et 10G de memoire, vous pouvez spécifier le nombre de cpu, et la taille de memoire a alloué , en changeant l'option «-n » et ajoutant l'option «--mem » , (pour plus de détails sur les options de la commande salloc voir le lien `https://slurm.schedmd.com/salloc.html <https://slurm.schedmd.com/salloc.htmlL>`_) :
    
  
 Se connecter en mode ssh au noeud réservé au job donnée par la commande précédente.
@@ -41,6 +41,7 @@ Puis lancer l’application:
 .. image:: /source/figures/application-snap/snapapp.png
   
 .. warning::
+
     N’oubliez pas de libérer les ressources réservés (nœud de calcul) à la fin du calcul :
 
 .. code-block:: bash
