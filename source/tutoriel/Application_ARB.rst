@@ -25,8 +25,6 @@ une fois connecté au nœud , charger les modules nécessaires pour le lancement
 
 .. code-block:: bash
 
-    $module load xerces-c/gcc/64/3.2.2
-
     $module load ARB/gcc/18314
 
 Puis lancer l’application:
