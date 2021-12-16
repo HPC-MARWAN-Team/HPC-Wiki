@@ -9,5 +9,5 @@ Tutoriel
    Application NetLogo <Application_NetLogo.rst>
    Application ParaView <Application_ParaView.rst>
    Application Jupyter notebook <Application_Jupyter_notebook.rst>
-
+   Application SNAP <Application_SNAP.rst>
 
