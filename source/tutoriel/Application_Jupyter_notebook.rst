@@ -57,7 +57,8 @@ Sur Linux
 Ouvrir un terminal et lancer la commande suivante:
 
 .. code-block:: bash
-          ssh username@hpc-login.marwan.ma -L8080:node11:40000 –N
+
+       ssh username@hpc-login.marwan.ma -L8080:node11:40000 –N
     
 
 .. image:: /source/figures/app-jupyter-notebook/6.png
