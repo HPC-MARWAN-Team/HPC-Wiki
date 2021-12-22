@@ -42,10 +42,12 @@ Et le configurer pour permettre le forwarding entre
     - un port libre dans votre machine locale (exemple 8080)
     - la machine hpc-login.marwan.ma(port 22 )
     - et le nœud alloué (pour notre exemple : node11 , port 40000)
+    
 
 .. image:: /source/figures/app-jupyter-notebook/5.png
 
- Puis lancez le tunnel (bouton ‘Start’ ) et tapez le mot de passe de votre compte ssh sur la machine hpc-login.marwan.ma .
+
+Puis lancez le tunnel (bouton ‘Start’ ) et tapez le mot de passe de votre compte ssh sur la machine hpc-login.marwan.ma 
    
 .. image:: /source/figures/app-jupyter-notebook/6.png
 
