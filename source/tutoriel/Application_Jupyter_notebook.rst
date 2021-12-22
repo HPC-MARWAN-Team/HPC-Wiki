@@ -45,10 +45,8 @@ Et le configurer pour permettre le forwarding entre
 
 .. image:: /source/figures/app-jupyter-notebook/5.png
 
-
  Puis lancez le tunnel (bouton ‘Start’ ) et tapez le mot de passe de votre compte ssh sur la machine hpc-login.marwan.ma .
    
-
 .. image:: /source/figures/app-jupyter-notebook/6.png
 
 
