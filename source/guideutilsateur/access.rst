@@ -12,7 +12,7 @@ Commande ssh et commande scp ou installer un client (Filezilla) pour le transfer
 
 .. code-block:: bash
     
-    $ssh -X @hpc-login.marwan.ma ( remplacer par votre login )
+    $ssh -X login@hpc-login.marwan.ma ( remplacer par votre login )
 
 Transfert de fichier 
 *********************
