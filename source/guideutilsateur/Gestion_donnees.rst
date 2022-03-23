@@ -4,14 +4,15 @@ Gestion des données
 Systèmes de fichiers 
 ***********************************
 
-Le cluster HPC-MARWAN contient deux espaces disques /home et /data pour la gestion des fichiers. Un dossier personnel est mis à la disposition de l’utilisateur sur chacun des deux espaces :
+Le cluster HPC-MARWAN contient 3 espaces disques /home , /data et /scratch pour la gestion des fichiers. Un dossier personnel est mis à la disposition de l’utilisateur sur chacun des  espaces :
 
   * Le dossier personnel sur l’espace /home (/home/$USER) , limité à ``100G`` par utilisateur.
   * Le dossier personnel sur l’espace /data (/data/$USER) , limité à ``500G`` par utilisateur.
   * Le dossier personnel sur l’espace /scratch (/scratch/users/$USER) , limité à ``500G`` par utilisateur.
 
 
-Il est recommandé d’utiliser l’espace /home pour les fichiers scripts de slurm , bash scripts et codes sources. les fichiers de grandes tailles ( input ou output ) doivent être placé dans le dossier personnel sur l’espace /data .
+Il est recommandé d’utiliser l’espace /home pour les fichiers scripts de slurm , bash scripts et codes sources. les fichiers de grandes tailles ( input ou output ) doivent être placé dans le dossier personnel sur l’espace /data , /scratch .
+
 **Essayer de nettoyer régulièrement** les dossiers /data/$USER , /home/$USER et /scratch/users/$USER en supprimant les fichiers et dossiers non utiles et en déplaçant les données pertinentes vers un stockage personnel.
 
 Gestion du quota disque sur /home
@@ -29,7 +30,7 @@ Ou ``blocks`` est la taille de votre espace /home/$USER en Megabyte, quota est l
 
 L’utilisateur ne peut pas dépasser la limite de 150G et aura immédiatement une erreur ``Disk quota exceeded``
 
-Au moment où l’utilisateur dépasse 100G sur son espace /home/$USER 2G, un compteur de ``14 jours`` se déclenche et décrémente chaque jour. Il s’agit d’un délai donné à l’utilisateur afin de lui permettre de nettoyer son espace /home. A la fin de cette période, si la taille de /home/$USER est toujours supérieure à 100G, le système déclenchera une erreur de dépassement de quota disque ``Disk quota exceeded``
+Au moment où l’utilisateur dépasse 100G sur son espace /home/$USER , un compteur de ``14 jours`` se déclenche et décrémente chaque jour. Il s’agit d’un délai donné à l’utilisateur afin de lui permettre de nettoyer son espace /home. A la fin de cette période, si la taille de /home/$USER est toujours supérieure à 100G, le système déclenchera une erreur de dépassement de quota disque ``Disk quota exceeded``
 
 le process qui precede s'applique aussi sur l'epace /data et /scratch
 
