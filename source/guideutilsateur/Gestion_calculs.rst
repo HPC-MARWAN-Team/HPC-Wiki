@@ -255,6 +255,9 @@ Vous pouvez également allouer un seul nœud ou plusieurs noeuds à l'aide de la
     JOBID PARTITION NAME USER ST TIME NODES NODELIST(REASON)
 
     109512 batch bash robh R 0:12 1 odin006
+    
+    $ ssh -X ordin006
+    
 
 
 ``salloc`` / ``srun`` / ``sbatch`` prend en charge un large éventail d'options qui vous permettent de demander des nœuds, des processeurs, des tâches, des sockets, des threads, de la mémoire, etc. Si vous les combinez, SLURM essaiera de trouver une allocation raisonnable, donc par exemple si vous demandez 13 tâches et 5 nœuds ,SLURM satisfera votre demande . Voici ceux qui sont les plus susceptibles d'être utiles :
