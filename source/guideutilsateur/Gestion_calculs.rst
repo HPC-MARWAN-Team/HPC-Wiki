@@ -133,7 +133,8 @@ Pour vérifier l'état de notre travail, nous vérifions la file d'attente en ut
     CPUS36856 yourUsername yourAccount example-job.sh R None 2017-07-01T16:47:02 0:11 59:49 1 1
 
 Les directives d’un script
-************************************
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
 
 Comme le montre l'exemple ci-dessus, les "directives" sont composées de ``#SBATCH`` suivi des options Slurm. Les options les plus couramment utilisées sont les suivantes :
 
@@ -228,7 +229,7 @@ Example de Script python run.sl
 Puis le lancer avec ``sbatch run.sl``
 
 Interactive jobs 
----------------------------
+*********************************
 
 La soumission des jobs à Slurm se fait soit en mode interactif soit en mode batch, Les jobs interactifs permettent à un utilisateur d'interagir avec des applications en temps réel dans l’environnement HPC. Les utilisateurs peuvent exécuter des applications d'interface utilisateur graphique (GUI), exécuter des scripts ou exécuter d'autres commandes directement sur un nœud de calcul.
 
