@@ -58,7 +58,7 @@ Si vous souhaitez utiliser des programmes avec une interface utilisateur graphiq
 Combien d'espace disque puis-je utiliser? 
 -----------------------------------------------------------------------
 
-Chaque utilisateur de HPC-MARWAN dispose d'un répertoire personnel de ``2Go`` (/home/login). Vous pouvez déposer vos fichiers volumineux sur /data/login,dont la limite et 2 To.
+Chaque utilisateur de HPC-MARWAN dispose d'un répertoire personnel de ``100Go`` (/home/login). Vous pouvez déposer vos fichiers volumineux sur /data/login ou /scratch/users/login ,dont la limite est 500 Go chacun.
 
 
 
@@ -118,9 +118,9 @@ Combien de calculs je peux lancer ?
 ------------------------------------------------------
 
 
-Le nombre de calculs qui peuvent être exécutés ``Etat Running`` simultanément pour chaque utilisateur est de ``20`` calculs. 
+Le nombre de calculs qui peuvent être exécutés ``Etat Running`` simultanément pour chaque utilisateur est de ``10`` calculs. 
 Le nombre de calcul pouvant être placés dans la queue ``Etat Pending`` est limité à ``10`` calculs.
-Le nombre de CPU pouvant être exploité par un utilisateur est limité à ``96`` CPU.
+Le nombre de CPU pouvant être exploité par un utilisateur est limité à ``64`` CPU.
 
 
 
