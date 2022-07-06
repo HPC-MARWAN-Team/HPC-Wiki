@@ -1,16 +1,15 @@
 Le Portail Jupyter HUB 
 ====================================
 
-Ce tutoriel vous montre comment exploiter le portail Jupyter HUB  pour la somission de calcul dans le 
-https://hpc-jupyter.marwan.ma:8000
+En plus de la soumission de job via Slurm avec les commandes bash , le service HPC-MARWAN fournit a  mis en place  portail jupyterhub  :  https://hpc-jupyter.marwan.ma:8000/ pour faciliter l'execution  des Jupyter Notebooks sur les noeuds de calcul du  cluster . 
 
 
 Ouvir la session 
 *****************
-capture login 
+Se connecter avec le nom d'utlisateur et le mot de passe de votre compte : 
 
 
-.. image:: /source/figures/app-paraview/0-runserver.png
+.. image:: /source/figures/portal-jupyter/0-login.png
 
 
 Explorateur de fichier 
