@@ -26,7 +26,7 @@ vous pouvez créer une template pour définir l'environnement d'execution de vot
 
 .. image:: /source/figures/portal-jupyter/2-tools.png
 
-Python via Slurm 
+Python 3.7 via Slurm 
 -----------------
 Cette template permet d'exploiter l'environnement par défaut installé sur HPC-MARWAN correspond à python 3.7  et propose des modules IA/DataScience  avec intégration des GPU (CUDA) : 
 
@@ -42,15 +42,21 @@ pour ce faire , créer un kernel à la base de cette template .
 
 puis l'associer a votre notebook 
 
-Attendre l initialisation du kernel , une fois pret vous pouver lancer les cellules 
+Attendre l initialisation du kernel , une fois pret vous pouver lancer interactivement  les cellules du notebook : 
 
-un kernel initialisé correspond à une allocation de ressource via SLURM que vous pouvez visualiser avec la commande squeue 
+
+un kernel initialisé correspond à une allocation de ressource via SLURM que vous pouvez visualiser avec la commande **squeue** au niveau de la session ssh vers la machine de login : 
+
     .. code-block:: bash
             [b.rahim@login02 ~]$ squeue -u $USER
              JOBID PARTITION     NAME     USER ST       TIME  NODES NODELIST(REASON)
             144585      defq jupyter- b.rahim  R      25:53      1 data32
 
-a la fin de votre simulation , vous pouvez arreter le kernel via l interface  et s'assurer que l'allocation a bien été annulée  
+a la fin de votre simulation , vous pouvez arreter le kernel via l interface 
+
+.. image:: /source/figures/portal-jupyter/shutdown.jpg
+
+et s'assurer que l'allocation a bien été annulée  avec la commande **squeue** 
 
 
 
