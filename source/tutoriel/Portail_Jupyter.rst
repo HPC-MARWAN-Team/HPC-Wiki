@@ -28,7 +28,7 @@ vous pouvez créer une template pour définir l'environnement d'execution de vot
 
 Python via Slurm 
 -----------------
-l'environnement par défaut installée sur HPC-MARWAN correspond à python 3.7  et propose des modules IA/DataScience  avec intégration des GPU (CUDA)
+Cette template permet d'exploiter l'environnement par défaut installé sur HPC-MARWAN correspond à python 3.7  et propose des modules IA/DataScience  avec intégration des GPU (CUDA) : 
 
 - ml-pythondeps-py37-cuda11.2-gcc8
 - nccl2-cuda11.2-gcc8
@@ -38,9 +38,25 @@ l'environnement par défaut installée sur HPC-MARWAN correspond à python 3.7  
 - tensorflow2-extra-py37-cuda11.2-gcc8
 - tensorflow2-py37-cuda11.2-gcc8
 
+pour ce faire , créer un kernel à la base de cette template .  
+
+puis l'associer a votre notebook 
+
+Attendre l initialisation du kernel , une fois pret vous pouver lancer les cellules 
+
+un kernel initialisé correspond à une allocation de ressource via SLURM que vous pouvez visualiser avec la commande squeue 
+    .. code-block:: bash
+            [b.rahim@login02 ~]$ squeue -u $USER
+             JOBID PARTITION     NAME     USER ST       TIME  NODES NODELIST(REASON)
+            144585      defq jupyter- b.rahim  R      25:53      1 data32
+
+a la fin de votre simulation , vous pouvez arreter le kernel via l interface  et s'assurer que l'allocation a bien été annulée  
+
+
+
 Conda via Slurm 
 -----------------
-Afin d exploiter votre propore environnement python crée par Anaconda 
+Cette template permet d'exploiter votre propore environnement python crée par Anaconda 
 
 il faut ajouter le package `cm-jupyter-eg-kernel-wlm` a votre environnement pour l'integrer au gestionnaire de tache SLURM : 
 
