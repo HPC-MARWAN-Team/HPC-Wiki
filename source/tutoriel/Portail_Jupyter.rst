@@ -30,35 +30,27 @@ vous pouvez créer une template pour définir l'environnement d'execution de vot
 
 .. image:: /source/figures/portal-jupyter/2-tools.png
 
-Python 3.7 via Slurm 
-----------------------
-Cette template permet d'exploiter l'environnement par défaut installé sur HPC-MARWAN correspond à python 3.7  et propose des modules IA/DataScience  avec intégration des GPU (CUDA) : 
-
-- ml-pythondeps-py37-cuda11.2-gcc8
-- nccl2-cuda11.2-gcc8
-- opencv4-py37-cuda11.2-gcc8
-- pytorch-extra-py37-cuda11.2-gcc8
-- pytorch-py37-cuda11.2-gcc8
-- tensorflow2-extra-py37-cuda11.2-gcc8
-- tensorflow2-py37-cuda11.2-gcc8
-
-pour ce faire , créer un nouveau kernel à la base de cette template (à l'aide du bouton +) 
+Création de kernel 
+*******************
+créer un nouveau kernel à la base de cette template (à l'aide du bouton +) 
 
 .. image:: /source/figures/portal-jupyter/new_kernel.jpg 
 
-puis l'associer a votre notebook 
+puis l'associer a votre notebook ouvert via l'explorateur de fichier 
+
+.. image:: /source/figures/portal-jupyter/set_kernel.jpg 
 
 Attendre l initialisation du kernel 
 
 .. image:: /source/figures/portal-jupyter/kernel_init.jpg
 
-, une fois pret (IDLE) 
+ une fois pret (IDLE) 
 
 .. image:: /source/figures/portal-jupyter/kernel_idle.jpg
 
 vous pouver lancer interactivement  les cellules du notebook : 
 
-.. image:: /source/figures/portal-jupyter/notebook.png
+.. image:: /source/figures/portal-jupyter/notebook.jpg
 
 un kernel initialisé correspond à une allocation de ressource via SLURM que vous pouvez visualiser avec la commande **squeue** au niveau de la session ssh vers la machine de login : 
 
@@ -74,6 +66,19 @@ a la fin de votre simulation , vous pouvez arreter le kernel via l interface
 et s'assurer que l'allocation a bien été annulée  avec la commande **squeue** 
 
 
+Python 3.7 via Slurm 
+----------------------
+Cette template permet d'exploiter l'environnement par défaut installé sur HPC-MARWAN correspond à python 3.7  et propose des modules IA/DataScience  avec intégration des GPU (CUDA) : 
+
+- ml-pythondeps-py37-cuda11.2-gcc8
+- nccl2-cuda11.2-gcc8
+- opencv4-py37-cuda11.2-gcc8
+- pytorch-extra-py37-cuda11.2-gcc8
+- pytorch-py37-cuda11.2-gcc8
+- tensorflow2-extra-py37-cuda11.2-gcc8
+- tensorflow2-py37-cuda11.2-gcc8
+
+pour ce faire , 
 
 Conda via Slurm 
 -----------------
