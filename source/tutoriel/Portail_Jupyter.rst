@@ -40,7 +40,7 @@ puis l'associer a votre notebook ouvert via l'explorateur de fichier
 
 .. image:: /source/figures/portal-jupyter/set_kernel.jpg 
 
-Attendre l initialisation du kernel 
+Attendre l'initialisation du kernel 
 
 .. image:: /source/figures/portal-jupyter/kernel_init.jpg
 
@@ -57,7 +57,7 @@ un kernel initialisé correspond à une allocation de ressource via SLURM que vo
     .. code-block:: bash
             [b.rahim@login02 ~]$ squeue -u $USER
              JOBID PARTITION     NAME     USER ST       TIME  NODES NODELIST(REASON)
-            144585      defq jupyter- b.rahim  R      25:53      1 data32
+            144585      defq jupyter- b.rahim  R      25:53      1 node22
 
 a la fin de votre simulation , vous pouvez arreter le kernel via l interface 
 
