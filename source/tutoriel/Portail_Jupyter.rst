@@ -49,6 +49,7 @@ pour ce faire , créer un nouveau kernel à la base de cette template (à l'aide
 puis l'associer a votre notebook 
 
 Attendre l initialisation du kernel 
+
 .. image:: /source/figures/portal-jupyter/kernel_init.jpg
 
 , une fois pret (IDLE) 
