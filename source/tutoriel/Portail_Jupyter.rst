@@ -21,7 +21,10 @@ le portail fournit un explorateur de fichiers qui vous permet la gestion de vos 
 
 Kernel templates  
 *****************
-TODO Definition du  kernel   .....
+HPC-MARWAN propose deux type de kernel : 
+
+.. note::
+    TODO Definition du  ``kernel``   .....
 vous pouvez créer une template pour définir l'environnement d'execution de votre job  via la menu suivant : 
 
 .. image:: /source/figures/portal-jupyter/2-tools.png
