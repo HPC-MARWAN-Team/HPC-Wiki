@@ -19,32 +19,34 @@ le portail fournit un explorateur de fichiers qui vous permet la gestion de vos 
 .. image:: /source/figures/portal-jupyter/1-explorer.png
 
 
-Kernel templates  
-*****************
-HPC-MARWAN propose deux type de kernel : 
 
-.. note:: 
-    TODO Definition du  ``kernel``   .....
-    
 vous pouvez créer une template pour définir l'environnement d'execution de votre job  via la menu suivant : 
 
 .. image:: /source/figures/portal-jupyter/2-tools.png
 
 Création de kernel 
 *******************
+
+.. note:: 
+    TODO Definition du  ``kernel``   .....
+  
+
 créer un nouveau kernel à la base de cette template (à l'aide du bouton +) 
 
 .. image:: /source/figures/portal-jupyter/new_kernel.jpg 
 
-puis l'associer a votre notebook ouvert via l'explorateur de fichier 
+Utilisation  du kernel 
+**********************
+
+puis l'associer a votre notebook :
 
 .. image:: /source/figures/portal-jupyter/select_kernel.jpg 
 
-Attendre l'initialisation du kernel 
+Attendre l'initialisation du kernel (INITIALIZING) 
 
 .. image:: /source/figures/portal-jupyter/kernel_init.jpg
 
- une fois pret (IDLE) 
+une fois le kernel  pret (IDLE) 
 
 .. image:: /source/figures/portal-jupyter/kernel_idle.jpg
 
@@ -65,7 +67,11 @@ a la fin de votre simulation , vous pouvez arreter le kernel via l interface
 
 et s'assurer que l'allocation a bien été annulée  avec la commande **squeue** 
 
+Kernel templates de HPC-MARWAN 
+*******************************
+HPC-MARWAN propose deux type de kernel : 
 
+    
 Python 3.7 via Slurm 
 ----------------------
 Cette template permet d'exploiter l'environnement par défaut installé sur HPC-MARWAN correspond à python 3.7  et propose des modules IA/DataScience  avec intégration des GPU (CUDA) : 
