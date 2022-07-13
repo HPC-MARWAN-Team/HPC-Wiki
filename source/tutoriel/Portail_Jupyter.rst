@@ -58,6 +58,7 @@ Attendre l initialisation du kernel
 
 vous pouver lancer interactivement  les cellules du notebook : 
 
+.. image:: /source/figures/portal-jupyter/notebook.png
 
 un kernel initialisé correspond à une allocation de ressource via SLURM que vous pouvez visualiser avec la commande **squeue** au niveau de la session ssh vers la machine de login : 
 
