@@ -48,7 +48,14 @@ pour ce faire , créer un nouveau kernel à la base de cette template (à l'aide
 
 puis l'associer a votre notebook 
 
-Attendre l initialisation du kernel , une fois pret vous pouver lancer interactivement  les cellules du notebook : 
+Attendre l initialisation du kernel 
+.. image:: /source/figures/portal-jupyter/kernel_init.jpg
+
+, une fois pret (IDLE) 
+
+.. image:: /source/figures/portal-jupyter/kernel_idle.jpg
+
+vous pouver lancer interactivement  les cellules du notebook : 
 
 
 un kernel initialisé correspond à une allocation de ressource via SLURM que vous pouvez visualiser avec la commande **squeue** au niveau de la session ssh vers la machine de login : 
