@@ -31,7 +31,7 @@ vous pouvez créer une template pour définir l'environnement d'execution de vot
 .. image:: /source/figures/portal-jupyter/2-tools.png
 
 Python 3.7 via Slurm 
------------------
+----------------------
 Cette template permet d'exploiter l'environnement par défaut installé sur HPC-MARWAN correspond à python 3.7  et propose des modules IA/DataScience  avec intégration des GPU (CUDA) : 
 
 - ml-pythondeps-py37-cuda11.2-gcc8
@@ -42,7 +42,9 @@ Cette template permet d'exploiter l'environnement par défaut installé sur HPC-
 - tensorflow2-extra-py37-cuda11.2-gcc8
 - tensorflow2-py37-cuda11.2-gcc8
 
-pour ce faire , créer un kernel à la base de cette template .  
+pour ce faire , créer un nouveau kernel à la base de cette template (à l'aide du bouton +) 
+
+.. image:: /source/figures/portal-jupyter/new_kernel.jpg 
 
 puis l'associer a votre notebook 
 
