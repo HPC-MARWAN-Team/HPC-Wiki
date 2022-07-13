@@ -38,7 +38,7 @@ créer un nouveau kernel à la base de cette template (à l'aide du bouton +)
 
 puis l'associer a votre notebook ouvert via l'explorateur de fichier 
 
-.. image:: /source/figures/portal-jupyter/set_kernel.jpg 
+.. image:: /source/figures/portal-jupyter/select_kernel.jpg 
 
 Attendre l'initialisation du kernel 
 
