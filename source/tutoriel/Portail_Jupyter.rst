@@ -30,13 +30,13 @@ Vous pouvez créer une template pour définir l'environnement d'execution de vot
 
 HPC-MARWAN propose deux template de kernel  :
 
-+---------------------------------------------------------+------------------------------------------------------------------+
-| Column                                                  |  Information                                                     |
-+=========================================================+==================================================================+
-| :ref:`Python 3.7 via Slurm  <python-3-7-via-slurm>`     | utilise  la version  python et les modules installés par défaut  | 
-+---------------------------------------------------------+------------------------------------------------------------------+
-| :ref:`Conda via Slurm <conda-via-slurm>`                | utilise l'environnement Conda préparé par l'utilisateur          |          
-+---------------------------------------------------------+------------------------------------------------------------------+
++-----------------------+------------------------------------------------------------------+
+| Template              | Description                                                      | 
++=========================================================+================================+
+| Python 3.7 via Slurm  | utilise  la version  python et les modules installés par défaut  | 
++-----------------------+------------------------------------------------------------------+
+| Conda via Slurm       | utilise l'environnement Conda préparé par l'utilisateur          |          
++-----------------------+------------------------------------------------------------------+
 
 
 
