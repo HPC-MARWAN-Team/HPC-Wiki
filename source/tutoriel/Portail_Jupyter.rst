@@ -30,8 +30,8 @@ Vous pouvez créer une template pour définir l'environnement d'execution de vot
 
 HPC-MARWAN propose deux template de kernel  :
 
-- Python 3.7 via Slurm (utilise  la version  python et les modules installés : [python-3-7-via-slurm] (#python-3-7-via-slurm) 
-- Conda via Slurm  (utilise l'environnement Conda préparé par l'utilisateur) :    [conda-via-slurm] (#conda-via-slurm)
+- Python 3.7 via Slurm (utilise  la version  python et les modules installés : :ref:`Voir <py37>`
+- Conda via Slurm  (utilise l'environnement Conda préparé par l'utilisateur) :   :ref:`Voir <conda>`
 
 Pour créer un nouveau kernel  , choisir la template ç utuliser et cliquer sur le bouton  ``+ ``
 
@@ -73,9 +73,10 @@ Kernel templates de HPC-MARWAN
 *******************************
 HPC-MARWAN propose deux type de kernel : 
 
-    
+  
 Python 3.7 via Slurm 
 ----------------------
+.. _py37:  
 Cette template permet d'exploiter l'environnement par défaut installé sur HPC-MARWAN correspond à python 3.7  et propose des modules IA/DataScience  avec intégration des GPU (CUDA) : 
 
 - ml-pythondeps-py37-cuda11.2-gcc8
@@ -88,8 +89,10 @@ Cette template permet d'exploiter l'environnement par défaut installé sur HPC-
 
 pour ce faire , 
 
+
 Conda via Slurm 
 -----------------
+.. _conda: 
 Cette template permet d'exploiter votre propore environnement python crée par Anaconda 
 
 il faut ajouter le package `cm-jupyter-eg-kernel-wlm` a votre environnement pour l'integrer au gestionnaire de tache SLURM : 
