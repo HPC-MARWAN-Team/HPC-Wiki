@@ -4,10 +4,9 @@ Le Portail Jupyter HUB
 En plus de la soumission de job via Slurm avec les commandes bash , le service HPC-MARWAN fournit a  mis en place  portail jupyterhub  :  https://hpc-jupyter.marwan.ma:8000/ pour faciliter l'execution  des Jupyter Notebooks sur les noeuds de calcul du  cluster . 
 
 
-Ouvir la session 
+Ouvir une session 
 *****************
 Se connecter avec le nom d'utlisateur et le mot de passe de votre compte : 
-
 
 .. image:: /source/figures/portal-jupyter/0-login.png
 
@@ -19,26 +18,29 @@ le portail fournit un explorateur de fichiers qui vous permet la gestion de vos 
 .. image:: /source/figures/portal-jupyter/1-explorer.png
 
 
-
-vous pouvez créer une template pour définir l'environnement d'execution de votre job  via la menu suivant : 
-
-.. image:: /source/figures/portal-jupyter/2-tools.png
-
 Création de kernel 
 *******************
 
+Vous pouvez créer une template pour définir l'environnement d'execution de votre job  via la menu suivant : 
+
+.. image:: /source/figures/portal-jupyter/2-tools.png
+
 .. note:: 
     TODO Definition du  ``kernel``   .....
-  
 
-créer un nouveau kernel à la base de cette template (à l'aide du bouton +) 
+HPC-MARWAN propose deux template de kernel  :
+
+- Python 3.7 via Slurm : qui se base sur la version  python et les modules installés par défaut au niveau du cluster 
+- Conda via Slurm  : qui se base sur la version  python et les modules installés par défaut au niveau du cluster 
+
+Pour créer un nouveau kernel  , choisir la template ç utuliser et cliquer sur le bouton  ``+ ``
 
 .. image:: /source/figures/portal-jupyter/new_kernel.jpg 
 
 Utilisation  du kernel 
 **********************
 
-puis l'associer a votre notebook :
+Pour exploiter le kernel , il suffit de l'assosier à votre notebook  :
 
 .. image:: /source/figures/portal-jupyter/select_kernel.jpg 
 
@@ -56,7 +58,7 @@ vous pouver lancer interactivement  les cellules du notebook :
 
 un kernel initialisé correspond à une allocation de ressource via SLURM que vous pouvez visualiser avec la commande **squeue** au niveau de la session ssh vers la machine de login : 
 
-    .. code-block:: bash
+.. code-block:: bash
             [b.rahim@login02 ~]$ squeue -u $USER
              JOBID PARTITION     NAME     USER ST       TIME  NODES NODELIST(REASON)
             144585      defq jupyter- b.rahim  R      25:53      1 node22
@@ -92,7 +94,7 @@ Cette template permet d'exploiter votre propore environnement python crée par A
 
 il faut ajouter le package `cm-jupyter-eg-kernel-wlm` a votre environnement pour l'integrer au gestionnaire de tache SLURM : 
 
-    .. code-block:: bash
+.. code-block:: bash
          $module load  Anaconda3/2021.11
          $conda activate my_env
          $pip install cm-jupyter-eg-kernel-wlm==2.0.0
