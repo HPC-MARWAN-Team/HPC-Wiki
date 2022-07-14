@@ -32,7 +32,7 @@ HPC-MARWAN propose deux template de kernel  :
 
 +-----------------------+------------------------------------------------------------------+
 | Template              | Description                                                      | 
-+=========================================================+================================+
++=======================+==================================================================+
 | Python 3.7 via Slurm  | utilise  la version  python et les modules installés par défaut  | 
 +-----------------------+------------------------------------------------------------------+
 | Conda via Slurm       | utilise l'environnement Conda préparé par l'utilisateur          |          
