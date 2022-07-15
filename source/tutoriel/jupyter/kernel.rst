@@ -4,10 +4,11 @@ Gestion de kernels
 ******************
 Selon la définition de Jupyter https://docs.jupyter.org/en/latest/projects/kernels.html 
 
-.. note:: 
-Kernels are programming language specific processes that run independently and interact with the Jupyter Applications and their user interfaces. ipykernel is the reference Jupyter kernel built on top of IPython, providing a powerful environment for interactive computing in Python.
+.. note::
+    Kernels are programming language specific processes that run independently and interact with the Jupyter Applications and their user interfaces. ipykernel is the reference Jupyter kernel built on top of IPython, providing a powerful environment for interactive computing in Python.
 
-au niveau  du cluster HPC-MARWAN ,  des modèles de création de kernel `Templates` sont proposé pour l'intégrer au gestionnaire de calcul SLURM 
+
+Au niveau  du cluster HPC-MARWAN ,  des modèles de création de kernel `Templates` sont proposés pour assurer l'intégration avec le gestionnaire de calcul SLURM .
 
 
 Création de kernel 
@@ -70,9 +71,10 @@ vous pouver lancer interactivement  les cellules du notebook :
 un kernel initialisé correspond à une allocation de ressource via SLURM que vous pouvez visualiser avec la commande **squeue** au niveau de la session ssh vers la machine de login : 
 
 .. code-block:: bash
-            [b.rahim@login02 ~]$ squeue -u $USER
-             JOBID PARTITION     NAME     USER ST       TIME  NODES NODELIST(REASON)
-            144585      defq jupyter- b.rahim  R      25:53      1 node22
+
+    [b.rahim@login02 ~]$ squeue -u $USER
+    JOBID PARTITION     NAME     USER ST       TIME  NODES NODELIST(REASON)
+    144585      defq jupyter- b.rahim  R      25:53      1 node22
 
 
 Arrêt du kernel 
