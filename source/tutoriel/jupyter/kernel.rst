@@ -9,6 +9,7 @@ Selon la définition de Jupyter https://docs.jupyter.org/en/latest/projects/kern
 
 
 Au niveau  du cluster HPC-MARWAN ,  des modèles de création de kernel `Templates` sont proposés pour assurer l'intégration avec le gestionnaire de calcul SLURM .
+Ceci permet à l'utiulisateur de lancer ses  kernels sur les noeuds de calcul du cluster .
 
 
 Création de kernel 
