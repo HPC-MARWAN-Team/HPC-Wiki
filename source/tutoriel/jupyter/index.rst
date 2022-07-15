@@ -1,13 +1,13 @@
 .. _jh-portal:
 
-Jupyter Hub Portal 
-******************
+Portail Jupyter Hub  
+********************
 
 
 .. toctree::
     :maxdepth: 2
 
     Accès au Portail <portal.rst>
-    Gestion des kernel  <kernel.rst>
-    Templates  <template.rst>
+    Gestion des kernels  <kernel.rst>
+    Templates <template.rst>
     Exemple GPU <gpu.rst>
