@@ -9,5 +9,5 @@ Portail Jupyter Hub
 
     Accès au Portail <portal.rst>
     Gestion des kernels  <kernel.rst>
-    Templates <template.rst>
-    Exemple GPU <gpu.rst>
+    Templates de kernel <template.rst>
+    Kernel sur GPU <gpu.rst>
