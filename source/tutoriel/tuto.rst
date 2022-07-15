@@ -11,5 +11,5 @@ Tutoriel
    Application Jupyter notebook <Application_Jupyter_notebook.rst>
    Application SNAP <Application_SNAP.rst>
    Portail Jupyter Hub <Portail_Jupyter.rst>
-   Jupyter Hub_Parts <jupyter/index.rst>
+   Jupyter Hub Portal <jupyter/index.rst>
 
