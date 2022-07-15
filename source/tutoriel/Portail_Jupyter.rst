@@ -48,7 +48,9 @@ Pour créer un nouveau kernel  , choisir la template à utiliser et cliquer sur 
 
 Un popup s'ouvre avec plusieurs options à remplir selon le besoin de l'utilisateur , tels que :  
 
-* Modules à charger 
+* Nombre de  Tasks  ( pour les job MPI)  
+
+* list des modules à charger 
 
 .. image:: /source/figures/portal-jupyter/module_load.jpg 
 
@@ -56,13 +58,17 @@ Un popup s'ouvre avec plusieurs options à remplir selon le besoin de l'utilisat
 
 .. image:: /source/figures/portal-jupyter/partition.jpg 
 
-* en cas d'utilisation de GPU , choisir le modele de carte 
+* L'utilisation des cartes GPU nécessite en plus de choisir 
+    
+    * le modèle de cartes GPU 
+       
+    .. image:: /source/figures/portal-jupyter/gpu_cards.jpg 
 
-.. image:: /source/figures/portal-jupyter/gpu_cards.jpg 
+    * une des partitions ``gpu-testq`` ou ``gpu-prodq`` selon la durée estimées ( 1 heure ou  7 jours respectivement ) 
 
-.. note:: 
-    pour utiliser les GPU , les partitions correspondantes sont ``gpu-testq`` et ``gpu-prodq``
-    choisir en plus le account "gpu_users" 
+    * Account ``gpu_users``
+    
+    .. image:: /source/figures/portal-jupyter/account.png
 
 
 Utilisation  du kernel 
