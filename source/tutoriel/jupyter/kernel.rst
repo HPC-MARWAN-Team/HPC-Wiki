@@ -1,10 +1,14 @@
 .. _jh-portal:
 
-Gestion de kernel   
+Gestion de kernels   
 ******************
+Selon la définition de Jupyter https://docs.jupyter.org/en/latest/projects/kernels.html 
 
 .. note:: 
-    TODO Definition du  ``kernel``   .....
+Kernels are programming language specific processes that run independently and interact with the Jupyter Applications and their user interfaces. ipykernel is the reference Jupyter kernel built on top of IPython, providing a powerful environment for interactive computing in Python.
+
+au niveau  du cluster HPC-MARWAN ,  des modèles de création de kernel `Templates` sont proposé pour l'intégrer au gestionnaire de calcul SLURM 
+
 
 Création de kernel 
 ==================
@@ -12,8 +16,6 @@ Création de kernel
 Vous pouvez créer une template pour définir l'environnement d'execution de votre job  via la menu suivant : 
 
 .. image:: /source/figures/portal-jupyter/2-tools.png
-
-
 
 HPC-MARWAN propose deux template de kernel  :
 
@@ -45,19 +47,6 @@ Un popup s'ouvre avec plusieurs options à remplir selon le besoin de l'utilisat
 
 .. image:: /source/figures/portal-jupyter/partition.jpg 
 
-* L'utilisation des cartes GPU nécessite en plus de choisir 
-    
-   * Le modèle de cartes GPU  ( Tesla P100 ou Volta S100 )
-       
-.. image:: /source/figures/portal-jupyter/gpu_cards.jpg 
-
-
-   * Une des partitions spécifique au GPU  : ``gpu-testq`` ou ``gpu-prodq`` selon la durée estimées ( 1 heure ou  7 jours respectivement ) 
-
-
-   * Account ``gpu_users`` si l'utulisateur est autorisé à réserver les cartes GPU 
-    
-.. image:: /source/figures/portal-jupyter/account.png
 
 
 Utilisation  du kernel 
