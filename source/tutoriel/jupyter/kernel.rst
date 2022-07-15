@@ -5,7 +5,7 @@ Gestion de kernels
 Selon la définition de Jupyter https://docs.jupyter.org/en/latest/projects/kernels.html 
 
 .. note::
-    Kernels are programming language specific processes that run independently and interact with the Jupyter Applications and their user interfaces. ipykernel is the reference Jupyter kernel built on top of IPython, providing a powerful environment for interactive computing in Python.
+    The user account concerned here (and throughout the entire wiki) is the one received via the DCCN check-in procedure.  It is, in most of cases, a combination of **the first three letters of your first name and the first three letters of your last name**.  It is **NOT** the account (i.e. U/Z/S-number) from the Radboud University.
 
 
 Au niveau  du cluster HPC-MARWAN ,  des modèles de création de kernel `Templates` sont proposés pour assurer l'intégration avec le gestionnaire de calcul SLURM .
