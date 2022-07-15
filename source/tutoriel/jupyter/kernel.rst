@@ -48,7 +48,6 @@ Un popup s'ouvre avec plusieurs options à remplir selon le besoin de l'utilisat
 .. image:: /source/figures/portal-jupyter/partition.jpg 
 
 
-
 Utilisation  du kernel 
 ======================
 
@@ -74,6 +73,10 @@ un kernel initialisé correspond à une allocation de ressource via SLURM que vo
             [b.rahim@login02 ~]$ squeue -u $USER
              JOBID PARTITION     NAME     USER ST       TIME  NODES NODELIST(REASON)
             144585      defq jupyter- b.rahim  R      25:53      1 node22
+
+
+Arrêt du kernel 
+===============
 
 a la fin de votre simulation , vous pouvez arreter le kernel via l interface 
 
