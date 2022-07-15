@@ -38,16 +38,31 @@ HPC-MARWAN propose deux template de kernel  :
 | Conda via Slurm       | utilise l'environnement Conda préparé par l'utilisateur          |          
 +-----------------------+------------------------------------------------------------------+
 
-.. note::
-    Pour plus de détail , voir la section [Kernel templates de HPC-MARWAN](<#kernel-templates-de-hpc-marwan> "Kernel templates de HPC-MARWAN")
+
+Pour plus de détail , voir la section [Kernel templates de HPC-MARWAN](<#kernel-templates-de-hpc-marwan> "Kernel templates de HPC-MARWAN")
  
 
 Pour créer un nouveau kernel  , choisir la template à utiliser et cliquer sur le bouton  ``+ ``
 
 .. image:: /source/figures/portal-jupyter/new_kernel.jpg 
 
-Un popup s'ouvre avec plusieurs champs à remplir selon le besoin de l'utilisateur : 
+Un popup s'ouvre avec plusieurs options à remplir selon le besoin de l'utilisateur , tels que :  
 
+* Modules à charger 
+
+.. image:: /source/figures/portal-jupyter/module_load.jpg 
+
+* Partition  pour l'allocation de ressources 
+
+.. image:: /source/figures/portal-jupyter/partition.jpg 
+
+* en cas d'utilisation de GPU , choisir le modele de carte 
+
+.. image:: /source/figures/portal-jupyter/gpu_cards.jpg 
+
+.. note:: 
+    pour utiliser les GPU , les partitions correspondantes sont ``gpu-testq`` et ``gpu-prodq``
+    choisir en plus le account "gpu_users" 
 
 
 Utilisation  du kernel 
@@ -100,7 +115,6 @@ Cette template permet d'exploiter l'environnement par défaut installé sur HPC-
 - tensorflow2-extra-py37-cuda11.2-gcc8
 - tensorflow2-py37-cuda11.2-gcc8
 
-pour ce faire , 
 
 
 Conda via Slurm 
