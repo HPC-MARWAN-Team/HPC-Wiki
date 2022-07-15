@@ -1,13 +1,19 @@
+.. _jh-portal:
+
+Gestion de kernel   
+******************
+
+.. note:: 
+    TODO Definition du  ``kernel``   .....
 
 Création de kernel 
-*******************
+==================
 
 Vous pouvez créer une template pour définir l'environnement d'execution de votre job  via la menu suivant : 
 
 .. image:: /source/figures/portal-jupyter/2-tools.png
 
-.. note:: 
-    TODO Definition du  ``kernel``   .....
+
 
 HPC-MARWAN propose deux template de kernel  :
 
@@ -55,7 +61,7 @@ Un popup s'ouvre avec plusieurs options à remplir selon le besoin de l'utilisat
 
 
 Utilisation  du kernel 
-**********************
+======================
 
 Pour exploiter le kernel , il suffit de l'assosier à votre notebook  :
 
