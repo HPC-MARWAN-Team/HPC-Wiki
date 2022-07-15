@@ -1,5 +1,5 @@
-Exemple avec GPU 
-********************
+Kernel sur GPU 
+***************
 L'utilisation des cartes GPU nécessite de spécifier : 
     
 * Le modèle de cartes GPU  ( Tesla P100 ou Volta S100 ) ;
