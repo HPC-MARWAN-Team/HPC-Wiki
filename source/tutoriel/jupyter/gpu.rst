@@ -1,12 +1,12 @@
 Notebook sur GPU 
 *******************************
- L'utilisation des cartes GPU nécessite de spécifier : 
+L'utilisation des cartes GPU nécessite de spécifier : 
     
-   * Le modèle de cartes GPU  ( Tesla P100 ou Volta S100 ) ;
+* Le modèle de cartes GPU  ( Tesla P100 ou Volta S100 ) ;
 
-   * Une des partitions spécifique au GPU  : ``gpu-testq`` ou ``gpu-prodq`` selon la durée estimées ( 1 heure ou  7 jours respectivement )  ;
+* Une des partitions spécifique au GPU  : ``gpu-testq`` ou ``gpu-prodq`` selon la durée estimées ( 1 heure ou  7 jours respectivement )  ;
 
-   * Account ``gpu_users`` si l'utulisateur est autorisé à réserver les cartes GPU ;
+* Account ``gpu_users`` si l'utulisateur est autorisé à réserver les cartes GPU ;
     
 ci dessous un exemple de création de kernel pour GPU 
 
