@@ -60,15 +60,15 @@ Un popup s'ouvre avec plusieurs options à remplir selon le besoin de l'utilisat
 
 * L'utilisation des cartes GPU nécessite en plus de choisir 
     
-    * le modèle de cartes GPU 
+    * Le modèle de cartes GPU  ( Tesla P100 ou Volta S100 ) 
        
-    .. image:: /source/figures/portal-jupyter/gpu_cards.jpg 
+.. image:: /source/figures/portal-jupyter/gpu_cards.jpg 
 
-    * une des partitions ``gpu-testq`` ou ``gpu-prodq`` selon la durée estimées ( 1 heure ou  7 jours respectivement ) 
+    * Une des partitions spécifique au GPU  : ``gpu-testq`` ou ``gpu-prodq`` selon la durée estimées ( 1 heure ou  7 jours respectivement ) 
 
-    * Account ``gpu_users``
+    * Account ``gpu_users`` si l'utulisateur est autorisé à réserver les cartes GPU 
     
-    .. image:: /source/figures/portal-jupyter/account.png
+.. image:: /source/figures/portal-jupyter/account.png
 
 
 Utilisation  du kernel 
