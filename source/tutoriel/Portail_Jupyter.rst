@@ -38,13 +38,15 @@ HPC-MARWAN propose deux template de kernel  :
 | Conda via Slurm       | utilise l'environnement Conda préparé par l'utilisateur          |          
 +-----------------------+------------------------------------------------------------------+
 
-Pour plus de détail , voir la section Kernel templates de HPC-MARWAN 
+.. note::
+    Pour plus de détail , voir la section [Kernel templates de HPC-MARWAN](<#kernel-templates-de-hpc-marwan> "Kernel templates de HPC-MARWAN")
+ 
 
 Pour créer un nouveau kernel  , choisir la template à utiliser et cliquer sur le bouton  ``+ ``
 
 .. image:: /source/figures/portal-jupyter/new_kernel.jpg 
 
-Un popup s'ouvre avec plusieurs champs à remplir selon le choix de l'utilisateur : 
+Un popup s'ouvre avec plusieurs champs à remplir selon le besoin de l'utilisateur : 
 
 
 
