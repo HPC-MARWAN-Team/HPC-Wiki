@@ -30,6 +30,7 @@ il faut ajouter le package `cm-jupyter-eg-kernel-wlm` a votre environnement pour
          $conda activate my_env
          $pip install cm-jupyter-eg-kernel-wlm==2.0.0
 
+
 puis créer une template  en spécifiant le nom de l'environnement à utiliser  :  
 
 .. image:: /source/figures/portal-jupyter/conda_env.jpg
