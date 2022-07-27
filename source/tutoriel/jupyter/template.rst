@@ -26,6 +26,7 @@ Cette template permet d'exploiter votre propore environnement python crée par A
 il faut ajouter le package `cm-jupyter-eg-kernel-wlm` a votre environnement pour l'integrer au gestionnaire de tache SLURM : 
 
 .. code-block:: bash
+
          $module load  Anaconda3/2021.11
          $conda activate my_env
          $pip install cm-jupyter-eg-kernel-wlm==2.0.0
