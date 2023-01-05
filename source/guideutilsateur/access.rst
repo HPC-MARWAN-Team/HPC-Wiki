@@ -12,7 +12,7 @@ Commande ssh et commande scp ou installer un client (Filezilla) pour le transfer
 
 .. code-block:: bash
     
-    $ssh -X login@hpc-login.marwan.ma ( remplacer par votre login )
+    $ssh -X username@hpc-login.marwan.ma ( remplacer par votre login )
 
 Transfert de fichier 
 *********************
@@ -21,14 +21,14 @@ Pour transferer un fichier depuis le HPC vers  la machine de l'utilisateur  , ut
 
 .. code-block:: bash
 
-     $scp <username>@hpc-login.marwan.ma:/home/<username>/fichier.txt   /home/<localuser>/fichier.txt
+     $scp username@hpc-login.marwan.ma:/home/username/fichier.txt   /home/localuser/fichier.txt
 
 
 Pour transferer un fichier depuis la machine de l'utilisateur vers le HPC  , utiliser la commande 
 
 .. code-block:: bash
  
-      $scp /home/<localuser>/fichier.txt <username>@hpc-login.marwan.ma:/home/<username>/fichier.txt 
+      $scp /home/localuser/fichier.txt username@hpc-login.marwan.ma:/home/username/fichier.txt 
 
 Transfert de dossier 
 **********************
@@ -37,9 +37,9 @@ Transfert de dossier
  
 .. code-block:: bash
     
-    $scp -r <username>@hpc-login.marwan.ma:/home/<username>/<dossier>   
+    $scp -r username@hpc-login.marwan.ma:/home/username/dossier   
     
-    $scp -r /home/<localuser>/<dossier> <username>@hpc-login.marwan.ma:/home/<username>/<dossier>
+    $scp -r /home/localuser/dossier username@hpc-login.marwan.ma:/home/username/dossier
 
 Ou utiliser un client SCP graphique( exemple Filezilla )
 
