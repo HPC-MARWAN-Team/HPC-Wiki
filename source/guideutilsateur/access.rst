@@ -16,12 +16,15 @@ Commande ssh et commande scp ou installer un client (Filezilla) pour le transfer
 
 Transfert de fichier 
 *********************
-pour transferer un fichier depuis le HPC vers  la machine de l'utilisateur  , utiliser la commande 
+
+Pour transferer un fichier depuis le HPC vers  la machine de l'utilisateur  , utiliser la commande :
+
 .. code-block:: bash
 
-
      $scp <username>@hpc-login.marwan.ma:/home/<username>/fichier.txt   /home/<localuser>/fichier.txt
-pour transferer un fichier depuis la machine de l'utilisateur vers le HPC  , utiliser la commande 
+
+
+Pour transferer un fichier depuis la machine de l'utilisateur vers le HPC  , utiliser la commande 
 
 .. code-block:: bash
  
@@ -30,9 +33,9 @@ pour transferer un fichier depuis la machine de l'utilisateur vers le HPC  , uti
 Transfert de dossier 
 **********************
 
+ Pour transferer tout un dossier , ajouter l’option -r à la commandes scp : 
+ 
 .. code-block:: bash
-
-  pour transferer tout un dossier , ajouter l’option -r à la commandes scp : 
     
     $scp -r <username>@hpc-login.marwan.ma:/home/<username>/<dossier>   
     
