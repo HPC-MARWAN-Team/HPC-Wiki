@@ -136,12 +136,11 @@ Afin de lister les process lancés par l'utilisateur , utiliser la commande suiv
 
 
 Pour annuler un process : 
-
+ 
 
 .. code-block:: bash
 
-kill -9 PID     
-
+  kill -9 PID
 
 
 
