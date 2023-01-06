@@ -130,12 +130,14 @@ Afin de lister les process lancés par l'utilisateur , utiliser la commande suiv
 .. code-block:: bash
 
 ps -o uid_hack,pid,lastcpu,%cpu,cmd --headers -u username -L
- 
+
+
 Pour annuler un process : 
  
 .. code-block:: bash
 
 kill -9 PID     
+
 
 (PID est l'identifiant du process affiché  via la commande précédente)
 
