@@ -123,4 +123,19 @@ Le nombre de calcul pouvant être placés dans la queue ``Etat Pending`` est lim
 Le nombre de CPU pouvant être exploité par un utilisateur est limité à ``64`` CPU.
 
 
+Comment annuler un process lancé par erreur  sur la machine login 
+------------------------------------------------------
+Afin de lister les process lancés par l'utilisateur , utiliser la commande suivante :
+ 
+.. code-block:: bash
+
+ps -o uid_hack,pid,lastcpu,%cpu,cmd --headers -u username -L
+ 
+Pour annuler un process : 
+ 
+.. code-block:: bash
+
+kill -9 PID     
+
+(PID est l'identifiant du process affiché  via la commande précédente)
 
