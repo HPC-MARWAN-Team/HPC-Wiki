@@ -127,9 +127,13 @@ Comment annuler un process lancé par erreur  sur la machine login
 ------------------------------------------------------
 Afin de lister les process lancés par l'utilisateur , utiliser la commande suivante :
  
+
 .. code-block:: bash
 
-ps -o uid_hack,pid,lastcpu,%cpu,cmd --headers -u username -L
+  ps -o uid_hack,pid,lastcpu,%cpu,cmd --headers -u username -L.
+
+
+
 
 
 Pour annuler un process : 
@@ -137,6 +141,7 @@ Pour annuler un process :
 .. code-block:: bash
 
 kill -9 PID     
+
 
 
 (PID est l'identifiant du process affiché  via la commande précédente)
