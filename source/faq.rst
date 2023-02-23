@@ -1,11 +1,27 @@
 Questions Fréquemment Posées
 ====================================
+`Q01 Principe de fonctionnement de HPC`
+
+`Q02 Que dois-je faire pour être autorisé à utiliser le cluster HPC-MARWAN?`
+
+`Q03 Ai-je besoin d'un programme spécial pour accéder au cluster HPC?`
+
+`Q04 Combien d'espace disque puis-je utiliser?` 
+
+`Q05 Demander de l'aide
+
+`Q06 Formulaire reçue incomplet`
+
+`Q07 Problèmes d’accès à l’HPC`
+
+`Q08 Probléme de lancement d'un calcul`
+
+`Q09 Comment annuler un process lancé par erreur  sur la machine login` 
 
 
 
 
-
-Principe de fonctionnement de HPC
+Q01 Principe de fonctionnement de HPC
 ------------------------------------------------
 
 
@@ -31,7 +47,7 @@ Aussi la réservation de la ressource ne peut généralement pas dépasser quelq
 
 	
 	
-Que dois-je faire pour être autorisé à utiliser le cluster HPC-MARWAN?
+Q02 Que dois-je faire pour être autorisé à utiliser le cluster HPC-MARWAN?
 -----------------------------------------------------------------------------------
 
 
@@ -45,7 +61,7 @@ Une fois la demande reçue ,l'équipe vous contactera dans les plus brefs délai
 
 
 
-Ai-je besoin d'un programme spécial pour accéder au cluster HPC?
+Q03 Ai-je besoin d'un programme spécial pour accéder au cluster HPC?
 ----------------------------------------------------------------------
 
 
@@ -55,14 +71,14 @@ Si vous souhaitez utiliser des programmes avec une interface utilisateur graphiq
 
 
 
-Combien d'espace disque puis-je utiliser? 
+Q04 Combien d'espace disque puis-je utiliser? 
 -----------------------------------------------------------------------
 
 Chaque utilisateur de HPC-MARWAN dispose d'un répertoire personnel de ``100Go`` (/home/login). Vous pouvez déposer vos fichiers volumineux sur /data/login ou /scratch/users/login ,dont la limite est 500 Go chacun.
 
 
 
-Demander de l'aide
+Q05 Demander de l'aide
 ---------------------------------------
 
 Le modèle de soutien du service HPC-MARWAN fournit une assistance personnelle individualisée pour répondre aux besoins uniques et complexes de chaque chercheur.
@@ -71,14 +87,14 @@ Si vous avez des questions ou si vous avez besoin d'aide pour utiliser le cluste
 
 
 
-Formulaire reçue incomplet
+Q06 Formulaire reçue incomplet
 ----------------------------------------
 
 Au cas de réception du formulaire incomplet,nous demandons à l’utilisateur de nous ré-envoyez le formulaire rempli et signé.
 
 
 
-Problèmes d’accès à l’HPC
+Q07 Problèmes d’accès à l’HPC
 --------------------------------------------
 
 La majorité des problèmes d’accès à l’HPC-MARWAN, sont dus:
@@ -94,7 +110,7 @@ Pour cela on demande aux utilisateurs de nous envoyer une capture d’écran du 
 
 
 
-Probléme de lancement d'un calcul
+Q08 Probléme de lancement d'un calcul
 ------------------------------------------------
 
 En cas d’utilisation d’un éditeur de fichier sous Windows pour écrire le script Slurm run.sl ; le lancement de ce dernier run.sl sous linux, vous donnera l’erreur suivante :
@@ -114,7 +130,7 @@ Afin de résoudre se problème, on vous propose d’utiliser un éditeur de fich
 
 
 
-Combien de calculs je peux lancer ?
+Q09 Combien de calculs je peux lancer ?
 ------------------------------------------------------
 
 
