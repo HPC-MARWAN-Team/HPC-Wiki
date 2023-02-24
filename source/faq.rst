@@ -1,23 +1,14 @@
 Questions Fréquemment Posées
 ====================================
 `Q01 Principe de fonctionnement de HPC`
-
 `Q02 Que dois-je faire pour être autorisé à utiliser le cluster HPC-MARWAN?`
-
 `Q03 Ai-je besoin d'un programme spécial pour accéder au cluster HPC?`
-
-`Q04 Combien d'espace disque puis-je utiliser?` 
-
-`Q05 Demander de l'aide
-
+`Q04 Combien d'espace disque puis-je utiliser?`
+`Q05 Demander de l'aide'
 `Q06 Formulaire reçue incomplet`
-
 `Q07 Problèmes d’accès à l’HPC`
-
 `Q08 Probléme de lancement d'un calcul`
-
-`Q09 Comment annuler un process lancé par erreur  sur la machine login` 
-
+`Q09 Comment annuler un process lancé par erreur  sur la machine login?`
 
 
 
