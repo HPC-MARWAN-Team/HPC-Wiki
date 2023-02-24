@@ -1,17 +1,18 @@
 Questions Fréquemment Posées
 ====================================
-`Q01 Principe de fonctionnement de HPC`
-`Q02 Que dois-je faire pour être autorisé à utiliser le cluster HPC-MARWAN?`
-`Q03 Ai-je besoin d'un programme spécial pour accéder au cluster HPC?`
-`Q04 Combien d'espace disque puis-je utiliser?`
-`Q05 Demander de l'aide'
-`Q06 Formulaire reçue incomplet`
-`Q07 Problèmes d’accès à l’HPC`
-`Q08 Probléme de lancement d'un calcul`
-:ref:`Q09 Comment annuler un process lancé par erreur  sur la machine login?<Q09>`
+:ref:`Q01 Principe de fonctionnement de HPC<Q01>`
+:ref:`Q02 Que dois-je faire pour être autorisé à utiliser le cluster HPC-MARWAN?<Q02>`
+:ref:`Q03 Ai-je besoin d'un programme spécial pour accéder au cluster HPC?<Q03>`
+:ref:`Q04 Combien d'espace disque puis-je utiliser?<Q04>`
+:ref:`Q05 Demander de l'aide<Q05>`
+:ref:`Q06 Formulaire reçue incomplet<Q06>`
+:ref:`Q07 Problèmes d’accès à l’HPC<Q07>`
+:ref:`Q08 Probléme de lancement d'un calcul<Q08>`
+:ref:`Q09 Combien de calculs je peux lancer ?<Q09>`
+:ref:`Q10 Comment annuler un process lancé par erreur  sur la machine login?<Q10>`
 
 
-
+.. _Q01:
 Q01 Principe de fonctionnement de HPC
 ------------------------------------------------
 
@@ -37,7 +38,7 @@ Aussi la réservation de la ressource ne peut généralement pas dépasser quelq
      et laisser le mode interactif pour le ``post-processing`` par exemple la visualisation d’un fichier output.
 
 	
-	
+.. _Q02:	
 Q02 Que dois-je faire pour être autorisé à utiliser le cluster HPC-MARWAN?
 -----------------------------------------------------------------------------------
 
@@ -51,7 +52,7 @@ Afin d'accéder au Cluster HPC-MARWAN , il vous suffit de remplir ce formulaire 
 Une fois la demande reçue ,l'équipe vous contactera dans les plus brefs délais pour la création du compte d'accès.
 
 
-
+.. _Q03:
 Q03 Ai-je besoin d'un programme spécial pour accéder au cluster HPC?
 ----------------------------------------------------------------------
 
@@ -61,14 +62,14 @@ Cela dépend du système d'exploitation que vous utilisez sur votre ordinateur p
 Si vous souhaitez utiliser des programmes avec une interface utilisateur graphique, vous pouvez installer le logiciel ``Mobaxtream`` (disponible pour Windows). Les instructions sont disponibles sous le rubrique Guide utilisateur.
 
 
-
+.. _Q04:
 Q04 Combien d'espace disque puis-je utiliser? 
 -----------------------------------------------------------------------
 
 Chaque utilisateur de HPC-MARWAN dispose d'un répertoire personnel de ``100Go`` (/home/login). Vous pouvez déposer vos fichiers volumineux sur /data/login ou /scratch/users/login ,dont la limite est 500 Go chacun.
 
 
-
+.. _Q05:
 Q05 Demander de l'aide
 ---------------------------------------
 
@@ -77,14 +78,14 @@ Le modèle de soutien du service HPC-MARWAN fournit une assistance personnelle i
 Si vous avez des questions ou si vous avez besoin d'aide pour utiliser le cluster, envoyez un e-mail à hpc@marwan.ma.
 
 
-
+.. _Q06:
 Q06 Formulaire reçue incomplet
 ----------------------------------------
 
 Au cas de réception du formulaire incomplet,nous demandons à l’utilisateur de nous ré-envoyez le formulaire rempli et signé.
 
 
-
+.. _Q07:
 Q07 Problèmes d’accès à l’HPC
 --------------------------------------------
 
@@ -100,7 +101,7 @@ Pour cela on demande aux utilisateurs de nous envoyer une capture d’écran du 
 
 
 
-
+.. _Q08:
 Q08 Probléme de lancement d'un calcul
 ------------------------------------------------
 
@@ -130,8 +131,8 @@ Le nombre de calculs qui peuvent être exécutés ``Etat Running`` simultanémen
 Le nombre de calcul pouvant être placés dans la queue ``Etat Pending`` est limité à ``10`` calculs.
 Le nombre de CPU pouvant être exploité par un utilisateur est limité à ``64`` CPU.
 
-
-Comment annuler un process lancé par erreur  sur la machine login 
+.. _Q10:
+Q10 Comment annuler un process lancé par erreur  sur la machine login?
 ------------------------------------------------------
 Afin de lister les process lancés par l'utilisateur , utiliser la commande suivante :
  
