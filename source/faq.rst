@@ -1,7 +1,6 @@
 Questions Fréquemment Posées
 ====================================
-.. hlist::
-    :columns: 2
+
 	:ref:`Q01 Principe de fonctionnement de HPC <Q01>`
 	:ref:`Q02 Que dois-je faire pour être autorisé à utiliser le cluster HPC-MARWAN? <Q02>`
 	:ref:`Q03 Ai-je besoin d'un programme spécial pour accéder au cluster HPC? <Q03>`
