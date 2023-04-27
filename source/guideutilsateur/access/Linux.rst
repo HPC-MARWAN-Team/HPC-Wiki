@@ -36,7 +36,7 @@ Ouvrir un terminal de votre machine et taper la commande scp
   $scp -r local_folder username@hpc-login.marwan.ma:/home/username/remote_folder
 
 
-Client SCP  
+Client SFTP  
 ***********
 
 Vous pouvez aussi utiliser le  client SCP de votre choix  . Voici la commande dâ€™installation de Filezilla pour Ubuntu :
@@ -48,3 +48,11 @@ Vous pouvez aussi utiliser le  client SCP de votre choix  . Voici la commande dâ
 .. image:: /source/figures/img_guideutilisateur/fiz.jpg
   :width: 600
  
+Monter l'espace avec le Gestionnaire de fichier 
+************************************************
+
+Dans la plupart des environnements de bureau modernes, le gestionnaire de fichiers (Nautilus, Nemo, Thunar, Dolphin, etc.) devrait prendre en charge SFTP.
+Exemple pour Nautilus sur Ubuntu
+
+.. image:: /source/figures/img_guideutilisateur/nautilus.jpg
+
