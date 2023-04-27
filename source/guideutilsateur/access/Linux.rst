@@ -3,22 +3,29 @@ Accès à l’HPC via Linux
 
 Via le Terminal 
 *****************
-
+ouvrir un terminal de votre machine  et taper la commande ssh : 
 .. code-block:: bash
     
     $ssh -X username@hpc-login.marwan.ma ( remplacer username par votre login )
 
-Transfert de fichier 
+Transfert de fichiers 
 *********************
+ouvrir un terminal de votre machine et taper la commande scp 
+
+pour transferer un fichier locale vers l'espace /home du cluster : 
 
 .. code-block:: bash
 
-     $scp username@hpc-login.marwan.ma:/home/username/remote_file   local_file 
-     $scp local_file username@hpc-login.marwan.ma:/home/username/remote_file
-     
-Transfert de dossier 
-**********************
-  ajouter l’option -r
+    $scp local_file username@hpc-login.marwan.ma:/home/username/remote_file
+
+pour transferer un fichier du cluser vers la machine utilisateur  : 
+
+.. code-block:: bash
+
+     $scp username@hpc-login.marwan.ma:/home/username/remote_file   local_file
+        
+ pour transferer un dossier , il suffit d'ajouter l’option -r
+ 
 .. code-block:: bash
 
   $scp -r username@hpc-login.marwan.ma:/home/username/remote_folder local_folder
