@@ -58,7 +58,7 @@ Monter l'espace avec le gestionnaire de fichiers
 *************************************************
 Dans la plupart des environnements de bureau modernes, le navigateur/gestionnaire de fichiers (Nautilus, Nemo, Thunar, Dolphin, etc.) devrait prendre en charge SFTP.
 
-.. image:: /source/figures/img_guideutilisateur/nautilus.jpg
+.. image:: /source/figures/img_guideutilisateur/nautilus.png
 
 Il suffit de spécifier  protocole sftp dans la barre du nom du serveur  __sftp://username@hpc-login.marwan.ma:/home/username__
 
