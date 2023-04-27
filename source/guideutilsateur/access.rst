@@ -41,9 +41,11 @@ Transfert de dossier
     
     $scp -r /home/localuser/dossier username@hpc-login.marwan.ma:/home/username/dossier
 
-Ou utiliser un client SCP graphique( exemple Filezilla )
+Outil de transfert de fichiers  
+*******************************
+Vous pouvez  utiliser un client SFTP   tel que  Filezilla . 
 
-Commande d’installation pour Ubuntu :
+Voici la Commande d’installation pour Ubuntu :
 
 .. code-block:: bash
 
@@ -52,6 +54,15 @@ Commande d’installation pour Ubuntu :
 .. image:: /source/figures/img_guideutilisateur/fiz.jpg
   :width: 600
 
+Monter l'espace avec le gestionnaire de fichiers 
+*************************************************
+Dans la plupart des environnements de bureau modernes, le navigateur/gestionnaire de fichiers (Nautilus, Nemo, Thunar, Dolphin, etc.) devrait prendre en charge SFTP.
+
+.. image:: /source/figures/img_guideutilisateur/nautilus.jpg
+
+Il suffit de spécifier  protocole sftp dans la barre du nom du serveur  __sftp://username@hpc-login.marwan.ma:/home/username__
+
+Une fois connecté, vous aurez accès aux répertoires et fichiers du serveur distant. Vous pourrez alors naviguer dans ces fichiers et dossiers, copier et coller des fichiers et dossiers, ainsi qu'éditer les fichiers textes, tout comme vous le feriez avec les fichiers et dossiers locaux.
 
 Via windows
 =============================
