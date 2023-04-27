@@ -60,7 +60,7 @@ Dans la plupart des environnements de bureau modernes, le navigateur/gestionnair
 
 .. image:: /source/figures/img_guideutilisateur/nautilus.png
 
-Il suffit de spécifier  protocole sftp dans la barre du nom du serveur  __sftp://username@hpc-login.marwan.ma:/home/username__
+Il suffit de spécifier  protocole sftp dans la barre du nom du serveur **sftp://username@hpc-login.marwan.ma:/home/username**
 
 Une fois connecté, vous aurez accès aux répertoires et fichiers du serveur distant. Vous pourrez alors naviguer dans ces fichiers et dossiers, copier et coller des fichiers et dossiers, ainsi qu'éditer les fichiers textes, tout comme vous le feriez avec les fichiers et dossiers locaux.
 
