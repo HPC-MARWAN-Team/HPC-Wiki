@@ -15,29 +15,31 @@ Transfert de fichiers
 
 Ouvrir un terminal de votre machine et taper la commande scp 
 
-pour transferer un fichier locale vers l'espace /home du cluster : 
+-Pour transferer un fichier locale vers l'espace /home du cluster : 
 
 .. code-block:: bash
 
     $scp local_file username@hpc-login.marwan.ma:/home/username/remote_file
 
-pour transferer un fichier du cluser vers la machine utilisateur  : 
+-Pour transferer un fichier du cluser vers la machine utilisateur  : 
 
 .. code-block:: bash
 
      $scp username@hpc-login.marwan.ma:/home/username/remote_file   local_file
-        
- pour transferer un dossier , il suffit d'ajouter l’option -r
+
+
+-Pour transferer un dossier , il suffit d'ajouter l’option -r
  
 .. code-block:: bash
 
   $scp -r username@hpc-login.marwan.ma:/home/username/remote_folder local_folder
   $scp -r local_folder username@hpc-login.marwan.ma:/home/username/remote_folder
 
-Client SCP 
+
+Client SCP  
 ***********
 
-Exemple Filezilla , voici la commande d’installation pour Ubuntu :
+Vous pouvez aussi utiliser le  client SCP de votre choix  . Voici la commande d’installation de Filezilla pour Ubuntu :
 
 .. code-block:: bash
 
