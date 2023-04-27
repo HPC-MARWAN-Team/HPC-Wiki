@@ -24,7 +24,10 @@ Transfert de dossier
 
     (ajouter l’option -r) $scp -r @hpc-login.marwan.ma:/home// $scp -r @hpc-login.marwan.ma:/home//
 
-Ou utiliser un client SCP graphique( exemple Filezilla )Commande d’installation pour Ubunto :
+Client SCP 
+***********
+
+Exemple Filezilla , voici la commande d’installation pour Ubuntu :
 
 .. code-block:: bash
 
