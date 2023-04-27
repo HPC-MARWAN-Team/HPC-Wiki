@@ -54,8 +54,8 @@ Voici la Commande d’installation pour Ubuntu :
 .. image:: /source/figures/img_guideutilisateur/fiz.jpg
   :width: 600
 
-Monter l'espace avec le gestionnaire de fichiers 
-*************************************************
+Connecter l'espace de stockage distant via le gestionnaire de fichier
+***********************************************************************
 Dans la plupart des environnements de bureau modernes, le navigateur/gestionnaire de fichiers (Nautilus, Nemo, Thunar, Dolphin, etc.) devrait prendre en charge SFTP.
 
 .. image:: /source/figures/img_guideutilisateur/nautilus.png
