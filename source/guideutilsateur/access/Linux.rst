@@ -3,14 +3,17 @@ Accès à l’HPC via Linux
 
 Via le Terminal 
 *****************
-ouvrir un terminal de votre machine  et taper la commande ssh : 
+
+Ouvrir un terminal de votre machine  et taper la commande ssh : 
+
 .. code-block:: bash
     
     $ssh -X username@hpc-login.marwan.ma ( remplacer username par votre login )
 
 Transfert de fichiers 
 *********************
-ouvrir un terminal de votre machine et taper la commande scp 
+
+Ouvrir un terminal de votre machine et taper la commande scp 
 
 pour transferer un fichier locale vers l'espace /home du cluster : 
 
