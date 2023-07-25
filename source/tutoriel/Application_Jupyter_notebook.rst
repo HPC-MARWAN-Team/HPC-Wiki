@@ -20,7 +20,7 @@ Vous pouvez ajouter d'autres argument pour demander une partition spécifique ou
 .. code-block:: bash
 
     export CONDA_ENVS_PATH=/data/$USER/envs
-    module load anaconda3
+    module load Anaconda3
     source activate my_Env_Name
 
 • Lancer Jupyter Notebook en précisant un numéro de port (40000 par exemple)
