@@ -62,7 +62,7 @@ Ouvrir un terminal et lancer la commande suivante:
 
 .. code-block:: bash
 
-       ssh username@hpc-login.marwan.ma -L8080:node11:40000 –N
+       ssh username@hpc-login.marwan.ma -L8080:node11:40000 -N
 
 
 Une fois le tunnel ssh démarré, vous pouvez vous connecter via le navigateur de votre machine local (de préférence Firefox ou Chrome) après avoir fourni le token généré (par exemple : db3648aa8efc526c89239523acda3a166ce17389fab97c94), voir la figure suivante :
