@@ -25,6 +25,10 @@ Vous pouvez ajouter d'autres argument pour demander une partition spécifique ou
 
 • Lancer Jupyter Notebook en précisant un numéro de port (40000 par exemple)
 
+.. code-block:: bash
+
+    jupyter notebook --no-browser --port=40000 --ip=node11
+    
 
 .. image:: /source/figures/app-jupyter-notebook/linux2.jpg
   
