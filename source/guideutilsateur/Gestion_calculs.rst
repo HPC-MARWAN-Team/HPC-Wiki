@@ -166,7 +166,7 @@ Comme le montre l'exemple ci-dessus, les "directives" sont composées de ``#SBAT
 |                        |                     | Utilisez TOUS pour recevoir des notifications par e-mail au début et à la fin du job. |
 +------------------------+---------------------+---------------------------------------------------------------------------------------+
 
-Des options supplémentaires sont disponibles dans la documentation officielle de Slurm. Si vous ne spécifiez pas de partition, votre job sera placé dans la partition par défaut du cluster HPC-MARWAN.
+Des options supplémentaires sont disponibles dans la documentation officielle de Slurm. 
 
 Exemple de script run.sl pour les applications installer sur HPC 
 ------------------------------------------------------------------------
