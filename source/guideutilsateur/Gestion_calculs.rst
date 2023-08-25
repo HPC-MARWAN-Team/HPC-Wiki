@@ -105,13 +105,10 @@ Voici un exemple de ``script.sl`` qui exécute un job sur une unité centrale su
     #SBATCH --ntasks=1 --nodes=1
 
     #SBATCH --mem-per-cpu=5G
-
+    
+    #SBATCH --partition=defq
+    
     #SBATCH --time=12:00:00
-
-    #SBATCH --mail-type=ALL
-
-    #SBATCH --mail-user=<email>
-
     
     ./myprog -p 20 arg1 arg2 arg3 ...
 
