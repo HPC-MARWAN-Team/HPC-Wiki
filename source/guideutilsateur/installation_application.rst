@@ -336,19 +336,3 @@ Afin d’utiliser ce module, vous devez indiquer à lmod où le chercher. Vous p
     $ module load software-name/toolchaine/version
 
 NOTE : le module use et le module load "software_name" doivent être entrés dans la ligne de commande chaque fois que vous entrez dans une nouvelle session sur le système, aussi à déclarer au niveau du script Slurm pour lancer un job utilisant une de vos applications installées en local.
-
-Source :
-https://docs-research-it.berkeley.edu/services/high-performance-computing/user-guide/software/installing-software/
-
-https://hpc.uni.lu/old/users/docs/software_installation.html
-
-https://hpc-unibe-ch.github.io/software/installing-custom-software.html
-
-https://www.osc.edu/resources/getting_started/howto/howto_locally_installing_software
-
-https://support.ceci-hpc.be/doc/_contents/UsingSoftwareAndLibraries/InstallingSoftwareByYourself/index.html#
-
-https://arccwiki.atlassian.net/wiki/spaces/DOCUMENTAT/pages/3178506/Installing+Software+Yourself+on+HPC+Cluster
-https://sites.google.com/a/case.edu/hpcc/hpc-cluster/software/software-installation-guide?authuser=0
-https://www.prl.res.in/prl-eng/hpc/software/installing_software_by_yourself
-https://documentation.sigma2.no/software/userinstallsw.html#
