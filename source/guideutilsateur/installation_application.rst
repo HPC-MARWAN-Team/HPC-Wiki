@@ -6,7 +6,7 @@ L’équipe HPC-MARWAN prend en charge l’installation d’une pile logicielle 
 
 La liste des applications installées sur HPC-MARWAN sont disponibles sur le site web HPC-MARWAN (lien), ou en utilisant la commande « module avail ». Pour plus d’information, voir le guide d’utilisateur(lien).
 
-Indépendamment de la méthode d’installation, le répertoire d’application doit être placer dans l’espace utilisateur /data/$USER.
+Indépendamment de la méthode d’installation, le répertoire d’application doit être placer dans l’espace utilisateur /home/$USER.
 Si l’installations ne peut être effectuée que par l’équipe HPC-MARWAN. Vous pouvez envoyer une demande d’installation d’application à l’équipe par mail à hpc@marwan.ma
 Ceci est un d’installation des applications dans votre répertoire personnel. Si vous avez besoin d'aide, veuillez envoyer vos erreurs via (lien de portail de support).
 
@@ -42,7 +42,7 @@ Vous pouvez créer cette structure avec une seule commande :
 
 .. code-block:: bash
 
-    $  mkdir -p /data/$USER/local/apps /data/$USER/local/modfiles/data/$USER/local/share
+    $  mkdir -p /home/$USER/local/apps /home/$USER/local/modfiles/home/$USER/local/share
 
 
 Allocation de ressource
@@ -83,7 +83,7 @@ Depuis GitHub : comme un service d'hébergement basé sur le web, clonez le dép
 
 .. code-block:: bash
 
-    $ scp -r /fromyourlocal/folder-name   $USER@hpc-login.marwan.ma:/data/$USER/local/share/
+    $ scp -r /fromyourlocal/folder-name   $USER@hpc-login.marwan.ma:/home/$USER/local/share/
 
 Installation d’application
 *********************************
@@ -114,7 +114,7 @@ Dans ce cas, nous utiliserons l'option --prefix de l'outil configure pour spéci
 
 .. code-block:: bash
 
-    $./configure --prefix=/data/$USER/local/apps/software-name/version
+    $./configure --prefix=/home/$USER/local/apps/software-name/version
     $ make
     $ make install
     $ make clean
@@ -126,17 +126,17 @@ L'utilitaire make est celui qui effectue la compilation et l'édition de liens. 
 CMake install
 --------------------------------
 Cmake est le système de construction multiplateforme. Le processus de construction est décrit dans un simple fichier texte CMakeLists.txt via des commandes spéciales de CMake. Lorsqu'il est invoqué, CMake analyse ces fichiers texte et génère une chaîne de compilation native pour la plate-forme et le compilateur souhaités. Il fournit des options permettant à l'utilisateur de personnaliser le processus de construction.
-Pour modifier les variables CMake, utilisez l'option -D après la commande cmake. Pour changer l'emplacement du répertoire d'installation du répertoire par défaut /usr/local au répertoire personnel, utilisez "DCMAKE_INSTALL_PREFIX=/data/$USER/local/apps/software-name/version".
+Pour modifier les variables CMake, utilisez l'option -D après la commande cmake. Pour changer l'emplacement du répertoire d'installation du répertoire par défaut /usr/local au répertoire personnel, utilisez "DCMAKE_INSTALL_PREFIX=/home/$USER/local/apps/software-name/version".
 Créez un répertoire de build et accédez-y. Les résultats du compilateur sont stockés ici, ce qui inclut les fichiers objets ainsi que l'exécutable final et les bibliothèques.
 .. code-block:: bash
 
-    $mkdir /data/$USER/local/sahre/software-name-0.1/build;cd build
+    $mkdir /home/$USER/local/sahre/software-name-0.1/build;cd build
 
 Exécutez la commande cmake avec les options appropriées.
 
 .. code-block:: bash
 
-    $cmake .. -DCMAKE_INSTALL_PREFIX=/data/$USER/local/apps/software-name/version
+    $cmake .. -DCMAKE_INSTALL_PREFIX=/home/$USER/local/apps/software-name/version
 
 (Si vous devez assigner plusieurs bibliothèques, vous pouvez le faire avec -D<X_LIBRARIES>='-L <path-to-library> -l<lib1> -l<lib2>')
 
@@ -160,8 +160,8 @@ Dans ce cas, Il vous suffit de décompresser ou de dé-tarer le fichier d'instal
 
  .. code-block:: bash
 
-    $tar xzvf software-name-0.1.tar.gz -C /data/$USER/local/apps/software-name/version
-    $unzip software-name-0.1.zip  -d /data/$USER/local/apps/software-name/version
+    $tar xzvf software-name-0.1.tar.gz -C /home/$USER/local/apps/software-name/version
+    $unzip software-name-0.1.zip  -d /home/$USER/local/apps/software-name/version
 
 Il y a des cas où le répertoire bin peut ne pas avoir la permission d'exécuter. Dans ce cas, exécutez la commande suivante :
 
@@ -178,8 +178,8 @@ EasyBuild est le moyen le plus simple et le plus rapide pour installer une appli
 
 .. code-block:: bash
 
-    $mkdir -p /data/$USER/local/Easybuild 
-    $Export $ EASYBUILD_PREFIX=/data/$USER/local/Easybuild
+    $mkdir -p /home/$USER/local/Easybuild 
+    $Export $ EASYBUILD_PREFIX=/home/$USER/local/Easybuild
 
 Les logiciels installée sont placés sous ${EASYBUILD_PREFIX}/software/
 Le chemin d'installation des modules ${EASYBUILD_PREFIX}/modules/all
@@ -278,8 +278,8 @@ Example d’installation de Geant4:
 
 .. code-block:: bash
 
-    $ export tmp_dir=/data/$USER/_Easybuild/tmp
-    $ export source_path=/data/$USER/local/share
+    $ export tmp_dir=/home/$USER/_Easybuild/tmp
+    $ export source_path=/home/$USER/local/share
     $eb Geant4-10.5-foss-2018b.eb -r --tmpdir=$tmp_dir --ignore-checksums --sourcepath=$source_path
 
 Dans cet exemple on lance l’installation de l’application Geant4 version 10.5 dont le toolchain est « foss-2018b ». L’option -r (--robot) active la résolution des dépendances, en installant automatiquement toutes les dépendances.  L’option --sourcepath permet de déterminer le dossier dans lequel Easybuild télécharge les archives et procède à l’installation, par contre l’option --tmpdir definit le dossier temporaire de chargement des archives.
@@ -296,7 +296,7 @@ vous devriez être en mesure d'utiliser l’application, en chargeant simplement
 
 .. code-block:: bash
 
-    $ module use /data/$USER/local/Easybuild/all
+    $ module use /home/$USER/local/Easybuild/all
     $ module load  software-name
 
 Création de module
@@ -306,7 +306,7 @@ Après avoir installé l’application dans votre répertoire comme expliqué ci
 Un fichier module décrit l'emplacement et la configuration de l'environnement pour l'application ciblée, par exemple en définissant les variables PATH, LD_LIBRARY_PATH et autres. Le système Lmod actuel recherche ces fichiers modules dans les sous-répertoires de tous les répertoires enregistrés dans $MODULEPATH. 
 Supposons que nous avons installé l’application software-name avec la version « X.Y». Le répertoire de module serait alors :
 .. code-block:: bash
-/data/$USER/local/modfiles/software-name/toolchaine/X.Y  
+/home/$USER/local/modfiles/software-name/toolchaine/X.Y  
 Nommez le fichier de module comme le numéro de version (X.Y) de votre logiciel installé, puis placez le fichier de module dans un répertoire portant le nom du logiciel. 
 La manière la plus simple d'écrire votre fichier de module est d'utiliser l'exemple ci-dessous comme modèle.
 
@@ -321,7 +321,7 @@ La manière la plus simple d'écrire votre fichier de module est d'utiliser l'ex
       }
       module-whatis "adds software-name to your environment variables"    
      set                       version                     $version
-     set                       root                          /data/$USER/local/apps/software-name
+     set                       root                          /home/$USER/local/apps/software-name
      prepend-path     PATH                        $root/bin
      prepend-path     LD_LIBRARY_PATH   $root/lib64
      prepend-path     LIBRARY_PATH         $root/lib64
@@ -332,7 +332,7 @@ Afin d’utiliser ce module, vous devez indiquer à lmod où le chercher. Vous p
 
 .. code-block:: bash
 
-    $ module use /data/$USER/local/modfiles
+    $ module use /home/$USER/local/modfiles
     $ module load software-name/toolchaine/version
 
 NOTE : le module use et le module load "software_name" doivent être entrés dans la ligne de commande chaque fois que vous entrez dans une nouvelle session sur le système, aussi à déclarer au niveau du script Slurm pour lancer un job utilisant une de vos applications installées en local.
