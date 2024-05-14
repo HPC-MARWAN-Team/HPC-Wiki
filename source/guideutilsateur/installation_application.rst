@@ -80,6 +80,7 @@ Depuis GitHub : comme un service d'hébergement basé sur le web, clonez le dép
 .. code-block:: bash
 
     $ git clone <url>
+
 (Remarque : s'il n'y a pas d'option wget ou git pour télécharger et que vous téléchargez le fichier manuellement sur votre PC, transférez-le au HPC en suivant la procédure suivante : 
 
 .. code-block:: bash
