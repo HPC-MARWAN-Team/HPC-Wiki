@@ -4,11 +4,11 @@ Guide d'installation des applications
 
 L’équipe HPC-MARWAN prend en charge l’installation d’une pile logicielle assez étendue d’outils et d’applications les plus couramment utilisés par la communauté scientifique marocaine. Cependant, il est recommandé aux utilisateurs d'installer eux-mêmes les applications spécifiques dont dépend leur travail. 
 
-La liste des applications installées sur HPC-MARWAN sont disponibles sur le site web HPC-MARWAN (lien), ou en utilisant la commande « module avail ». Pour plus d’information, voir le guide d’utilisateur(lien).
+La liste des applications installées sur HPC-MARWAN sont disponibles sur `le site web HPC-MARWAN <https://hpc.marwan.ma/index.php/fr/>`, ou en utilisant la commande « module avail ». Pour plus d’information, voir le guide d’utilisateur `lien <https://hpc-wiki.readthedocs.io/fr/latest/source/guideutilsateur/installation_application.html>`.
 
 Indépendamment de la méthode d’installation, le répertoire d’application doit être placer dans l’espace utilisateur /home/$USER.
 Si l’installations ne peut être effectuée que par l’équipe HPC-MARWAN. Vous pouvez envoyer une demande d’installation d’application à l’équipe par mail à hpc@marwan.ma
-Ceci est un d’installation des applications dans votre répertoire personnel. Si vous avez besoin d'aide, veuillez envoyer vos erreurs via (lien de portail de support).
+Ceci est un d’installation des applications dans votre répertoire personnel. Si vous avez besoin d'aide, veuillez envoyer vos erreurs via `lien <https://hpc-wiki.readthedocs.io/fr/latest/source/guideutilsateur/Gestion_donnees.html>`.
 
 Condition d’installation
 *********************************
