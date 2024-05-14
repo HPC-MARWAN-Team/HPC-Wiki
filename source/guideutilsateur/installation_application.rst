@@ -76,6 +76,7 @@ Depuis le web :
 (Cliquez avec le bouton droit de la souris sur le lien du fichier et sélectionnez "copier l'adresse du lien" pour l'url).
 
 Depuis GitHub : comme un service d'hébergement basé sur le web, clonez le dépôt ou vous pouvez télécharger le format .zip en cliquant sur le lien ZIP :
+
 .. code-block:: bash
 
     $ git clone <url>
@@ -128,6 +129,7 @@ CMake install
 Cmake est le système de construction multiplateforme. Le processus de construction est décrit dans un simple fichier texte CMakeLists.txt via des commandes spéciales de CMake. Lorsqu'il est invoqué, CMake analyse ces fichiers texte et génère une chaîne de compilation native pour la plate-forme et le compilateur souhaités. Il fournit des options permettant à l'utilisateur de personnaliser le processus de construction.
 Pour modifier les variables CMake, utilisez l'option -D après la commande cmake. Pour changer l'emplacement du répertoire d'installation du répertoire par défaut /usr/local au répertoire personnel, utilisez "DCMAKE_INSTALL_PREFIX=/home/$USER/local/apps/software-name/version".
 Créez un répertoire de build et accédez-y. Les résultats du compilateur sont stockés ici, ce qui inclut les fichiers objets ainsi que l'exécutable final et les bibliothèques.
+
 .. code-block:: bash
 
     $mkdir /home/$USER/local/sahre/software-name-0.1/build;cd build
@@ -145,7 +147,9 @@ Makefile est créé dans le répertoire source une fois la configuration termin�
 .. code-block:: bash
 
     $make
+
 Pour installer les binaires et les bibliothèques à l'emplacement préfixé par configure pour le logiciel installé, utilisez la commande make install.
+
 .. code-block:: bash
 
     $make install
