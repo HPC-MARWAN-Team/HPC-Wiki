@@ -19,7 +19,7 @@ Vous pouvez ajouter d'autres argument pour demander une partition spécifique ou
 
 .. code-block:: bash
 
-    export CONDA_ENVS_PATH=/data/$USER/envs
+    export CONDA_ENVS_PATH=/home/$USER/envs
     module load Anaconda3
     source activate my_Env_Name
 
