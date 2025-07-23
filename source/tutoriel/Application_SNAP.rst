@@ -5,6 +5,7 @@ Vu le fait que l’application SNAP fonctionne en mode graphique, on vous demand
 
 
 .. code-block:: bash
+
     $srun -N 1 -n 1 -p defq --pty bash -i 
    
     $squeue -j 115113 :JOBID donnée par la commande précédente.
