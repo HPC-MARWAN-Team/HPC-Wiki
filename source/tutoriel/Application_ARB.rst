@@ -3,6 +3,12 @@ L'application ARB
 
 Vu le fait que l’application ARB fonctionne en mode graphique, on vous demande de lancer l’application dans un nœud de calcul libre, et non pas au niveau de la machine login login-hpc.marwan.ma, en exécutant les étapes suivantes :
 
+.. code-block:: bash
+
+        $srun -N 1 -n 1 -p defq --pty bash -i
+        $squeue --job 79860 :JOBID donnée par la commande précédente.
+
+
 .. image:: /source/figures/application-arb/etape_de_lancement_de_arb.png
    :width: 800
  
@@ -11,9 +17,8 @@ Allocation de ressource:  allocation de nœud de calcul libre pour une durée de
 
 .. code-block:: bash
 
-    $salloc -n1
-
-    $squeue --job 65467 :JOBID donnée par la commande précédente.
+        $srun -N 1 -n 1 -p defq --pty bash -i
+        $squeue --job 65467 :JOBID donnée par la commande précédente.
  
 se connecter en mode ssh au noeud réservé au job donnée par la commande précédente.
 
