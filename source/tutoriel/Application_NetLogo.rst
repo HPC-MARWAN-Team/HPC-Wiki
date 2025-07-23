@@ -4,6 +4,7 @@ L'application NetLogo
 Vu le fait que l’application NetLogo fonctionne en mode graphique, on vous demande de lancer l’application dans un nœud de calcul libre, et non pas au niveau de la machine login(login-hpc.marwan.ma), en exécutant les étapes suivantes :
 
  .. code-block:: bash
+
         $srun -N 1 -n 1 -p defq --pty bash -i
         $squeue --job 79860 :JOBID donnée par la commande précédente.
 
@@ -12,6 +13,7 @@ Vu le fait que l’application NetLogo fonctionne en mode graphique, on vous dem
 #. location de ressource: allocation de nœud de calcul libre pour une durée de 2 heure par défaut, vous pouvez la changer en spécifiant la partition avec l’option « -p » (pour plus de détails sur les partitions voir le lien `https://slurm.schedmd.com/salloc.html <https://slurm.schedmd.com/salloc.html>`_ ) :
 
     .. code-block:: bash
+
         $srun -N 1 -n 1 -p defq --pty bash -i
         $squeue --job 79860 :JOBID donnée par la commande précédente.
         
