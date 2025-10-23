@@ -248,13 +248,8 @@ Vous pouvez également allouer un seul nœud ou plusieurs noeuds à l'aide de la
 
     salloc: Granted job allocation 109512
 
-    $ squeue
-
-    JOBID PARTITION NAME USER ST TIME NODES NODELIST(REASON)
-
-    109512 batch bash robh R 0:12 1 odin006
-    
-    $ ssh -X ordin006
+       
+    $ srun --pty bash -i 
     
 
 
