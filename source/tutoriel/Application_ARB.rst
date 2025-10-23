@@ -20,11 +20,7 @@ Allocation de ressource:  allocation de nœud de calcul libre pour une durée de
         $srun -N 1 -n 1 -p defq --pty bash -i
         $squeue --job 65467 :JOBID donnée par la commande précédente.
  
-se connecter en mode ssh au noeud réservé au job donnée par la commande précédente.
-
-.. code-block:: bash
-
-    $ssh -X node07
+  
 
 une fois connecté au nœud , charger les modules nécessaires pour le lancement de l’application ARB :
 
