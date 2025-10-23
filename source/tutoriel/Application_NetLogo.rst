@@ -18,11 +18,6 @@ Vu le fait que l’application NetLogo fonctionne en mode graphique, on vous dem
         $squeue --job 79860 :JOBID donnée par la commande précédente.
         
 
-    se connecter en mode ssh au noeud libre donnée par la commande précédente :
-
-    .. code-block:: bash
-
-        $ssh -X node16
 
 #. une fois connecté au nœud , charger les modules nécessaires pour le lancement de l’application NetLogo :
 
