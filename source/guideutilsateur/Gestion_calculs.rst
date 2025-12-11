@@ -171,7 +171,7 @@ Des options supplémentaires sont disponibles dans la documentation officielle d
 Exemple de script run.sl pour les applications installer sur HPC 
 ------------------------------------------------------------------------
 
-Vous trouvez sur le lien suivant des exemples de script que vous pouvez utiliser ou s’inspirer d’eux pour écrire votre script slurm :`https://github.com/rahimbouchra/hpc_samples <https://github.com/rahimbouchra/hpc_samples>`_ .
+Vous trouvez sur le lien suivant des exemples de script que vous pouvez utiliser ou s’inspirer d’eux pour écrire votre script slurm :`https://github.com/HPC-MARWAN-Team/hpc_samples <https://github.com/HPC-MARWAN-Team/hpc_samples>`_ .
 
 Exemple de script java run.sl 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
