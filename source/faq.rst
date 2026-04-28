@@ -23,6 +23,8 @@ Questions Fréquemment Posées
 
 	:ref:`Q11 Saisie de mot de passe ou de code de vérification sur le client SSH  <Q11>`
 
+	:ref:`Q12 Que faire si le code de verification est invalide ? <Q12>`
+
 
 .. _Q01:
 Q01 Principe de fonctionnement de HPC
@@ -173,3 +175,10 @@ Q11 Saisie de mot de passe ou de code de vérification sur le client SSH
 Lorsque vous vous connectez à Linux, vous devez saisir un mot de passe. Si vous entrez le mot de passe correctement, , vous devez simplement appuyer sur la touche "Entrée" après avoir saisi le mot de passe pour ouvrir une session.
 Il est important de noter que Linux est différent des autres systèmes d'exploitation, comme Windows ou MacOS, car il ne montre pas les caractères de mot de passe que vous tapez à l'écran. Cela signifie que lorsque vous tapez votre mot de passe, il n'y aura pas d'étoiles  ou de points qui apparaissent à l'écran. C'est une mesure de sécurité pour empêcher les autres personnes de voir votre mot de passe si elles sont à proximité de vous. Donc, ne vous inquiétez pas si vous ne voyez pas les caractères que vous tapez, Linux est toujours en train de les enregistrer.
 
+.. _Q12:
+Q12 ue faire si le code de verification est invalide 
+------------------------------------------------------------------------
+
+Vérifiez l'heure de votre téléphone. Google Authenticator génère des codes basés sur l'heure actuelle. Si votre téléphone a une minute de décalage (heure manuelle), le code ne sera pas valide.
+
+Solution : Passez votre téléphone en "date et heure automatiques" dans les paramètres, puis réessayez.
