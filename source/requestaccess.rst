@@ -15,7 +15,7 @@ Pour obtenir l'accès, il vous suffit de :
 
  - Attestation d'inscription au cycle doctoral de l’année universitaire courante  pour les doctorants
  - Attestation de travail pour les enseignants 
- - `Charte d'utilisation  </source/pdf/HPC-CHARTE.pdf>` du cluster HPC-MARWAN signée et scannée 
+ - :download:`Charte d'utilisation  </source/pdf/HPC-CHARTE.pdf>` du cluster HPC-MARWAN signée et scannée 
 
 L'équipe HPC-MARWAN   traitera votre demande dans les meilleurs délais et vous enverra les informations nécessaires pour vous connecter au cluster.
 
