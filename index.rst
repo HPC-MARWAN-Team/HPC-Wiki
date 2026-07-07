@@ -1,22 +1,41 @@
+Bienvenue sur HPC-MARWAN
+========================
 
-.. HPC-MARWAN documentation master file, created by
-   sphinx-quickstart on Thu Sep 30 14:40:43 2021.
-   You can adapt this file completely to your liking, but it should at least
-   contain the root `toctree` directive.
+Le CNRST met à disposition de la communauté scientifique marocaine une infrastructure de calcul haute performance (HPC) accessible à distance.  
+Cette dernière est connectée au réseau MARWAN par un lien de 10 Gbps, assurant une fluidité optimale dans l’utilisation et les transferts de données depuis les Universités.
 
-Le wiki HPC-MARWAN
-******************
+Il s’agit d’un cluster dédié à la recherche scientifique, offrant puissance de calcul et capacité de stockage pour permettre aux chercheurs marocains d’effectuer leurs calculs dans divers domaines.
 
-Bienvenue sur le wiki de calcul haute performance (HPC) du Centre National pour la Recherche Scientifique et Technique (CNRST).
+Domaines d'application
+----------------------
+
+- Mathématiques
+- Physique
+- Chimie
+- Biologie
+- Intelligence Artificielle
+- Sciences de la Terre
+
+COMMENT UTILISER ?
+------------------
+
+Ce wiki fournit les informations nécessaires pour accéder au cluster, soumettre des jobs et exploiter les ressources HPC-MARWAN.
 
 
-Sommaire
-=================
+INFRASTRUCTURE
+--------------
 
-.. toctree::
-   :maxdepth: 2
-      
-   Demande d'accès <source/requestaccess.rst>
-   Guide utilisateur <source/guideutilsateur/indexguide.rst>
-   Tutoriel <source/tutoriel/tuto.rst>
-   FAQ <source/faq.rst>
+- Puissance de calcul CPU
+- Capacité de stockage
+- Accélérateurs GPU
+- Réseaux à faible latence
+
+
+SERVICES
+--------
+
+
+- Disponibilité et optimisation de l’infrastructure
+- Installation des applications scientifiques
+- Assistance et support technique
+- Formations et ateliers
