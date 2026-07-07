@@ -1,21 +1,41 @@
-Demande d'accès à HPC-MARWAN
-====================================
+Bienvenue sur HPC-MARWAN
+========================
 
-L'accès au cluster HPC-MARWAN est limité aux membres de la communauté académique ayant un statut d’Enseignant-chercheur ou de Doctorant.
+Le CNRST met à disposition de la communauté scientifique marocaine une infrastructure de calcul haute performance (HPC) accessible à distance.  
+Cette dernière est connectée au réseau MARWAN par un lien de 10 Gbps, assurant une fluidité optimale dans l’utilisation et les transferts de données depuis les Universités.
 
-Pour obtenir l'accès, il vous suffit de :
+Il s’agit d’un cluster dédié à la recherche scientifique, offrant puissance de calcul et capacité de stockage pour permettre aux chercheurs marocains d’effectuer leurs calculs dans divers domaines.
 
-- remplir le :download:`Formulaire de demande PDF  </source/pdf/HPC_FORM.pdf>`. (Renseigner les champs du formulaire à l'aide du clavier)
+Domaines d'application
+----------------------
 
-- le signer (Insérer une image de votre signature sur le formulaire, ou utiliser un outil de signature en ligne)
+- Mathématiques
+- Physique
+- Chimie
+- Biologie
+- Intelligence Artificielle
+- Sciences de la Terre
 
-- l'envoyer à l'adresse mail de l'équipe HPC-MARWAN : hpc@marwan.ma en utilisant votre adresse email institutionnelle (Nous n'acceptons pas les demandes provenant d'adresses email personnelles)
+COMMENT UTILISER ?
+------------------
 
-- et joindre les documents suivants :
+Ce wiki fournit les informations nécessaires pour accéder au cluster, soumettre des jobs et exploiter les ressources HPC-MARWAN.
 
- - Attestation d'inscription au cycle doctoral de l’année universitaire courante  pour les doctorants
- - Attestation de travail pour les enseignants 
- - :download:`Charte d'utilisation  </source/pdf/HPC_CHARTE.pdf>` du cluster HPC-MARWAN signée et scannée 
 
-L'équipe HPC-MARWAN   traitera votre demande dans les meilleurs délais et vous enverra les informations nécessaires pour vous connecter au cluster.
+INFRASTRUCTURE
+--------------
 
+- Puissance de calcul CPU
+- Capacité de stockage
+- Accélérateurs GPU
+- Réseaux à faible latence
+
+
+SERVICES
+--------
+
+
+- Disponibilité et optimisation de l’infrastructure
+- Installation des applications scientifiques
+- Assistance et support technique
+- Formations et ateliers
