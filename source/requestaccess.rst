@@ -5,7 +5,7 @@ L'accès au cluster HPC-MARWAN est limité aux membres de la communauté académ
 
 Pour obtenir l'accès, il vous suffit de :
 
-- remplir le :download:`Formulaire de demande PDF  </source/pdf/HPC-FORM.pdf>`. (Renseigner les champs du formulaire à l'aide du clavier)
+- remplir le :download:`Formulaire de demande PDF  <./source/pdf/HPC-FORM.pdf>`. (Renseigner les champs du formulaire à l'aide du clavier)
 
 - le signer (Insérer une image de votre signature sur le formulaire, ou utiliser un outil de signature en ligne)
 
@@ -15,7 +15,7 @@ Pour obtenir l'accès, il vous suffit de :
 
  - Attestation d'inscription au cycle doctoral de l’année universitaire courante  pour les doctorants
  - Attestation de travail pour les enseignants 
- - :download:`Charte d'utilisation  </source/pdf/HPC-CHARTE.pdf>` du cluster HPC-MARWAN signée et scannée 
+ - :download:`Charte d'utilisation  <./source/pdf/HPC-CHARTE.pdf>` du cluster HPC-MARWAN signée et scannée 
 
 L'équipe HPC-MARWAN   traitera votre demande dans les meilleurs délais et vous enverra les informations nécessaires pour vous connecter au cluster.
 
